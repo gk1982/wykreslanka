@@ -1,10 +1,27 @@
+html {
+	margin: 0;
+	padding: 0;
+}
+
 body {
 	margin: 0 auto;
+	padding: 0;
 	background-color: #484848;
 	color: white;
 	font-family: TimesNewRoman, "Times New Roman", Times, Georgia, serif;
 	font-size: 16px;
 	overflow-y: scroll;	
+}
+
+header h2 {
+	text-align: center;
+	margin: 4px 0px 0px 0px;
+	padding: 0px;
+}
+
+header span {
+	padding-left:4px;
+	padding-right: 4px;
 }
 
 .top-baner {
@@ -18,18 +35,7 @@ body {
 	display: flex;
 }
 
-header span {
-	padding-left:4px;
-	padding-right: 4px;
-}
-
-h2 {
-	text-align: center;
-	margin: 4px 0px 0px 0px;
-}
-
 #infoShow{
-	display: block;
 	position: relative;
 	width: 192px;
 	align-items: right;
