@@ -1,0 +1,162 @@
+body {
+	margin: 0 auto;
+	background-color: #484848;
+	color: white;
+	font-family: TimesNewRoman, "Times New Roman", Times, Georgia, serif;
+	font-size: 16px;
+	overflow-y: scroll;	
+}
+
+.top-baner {
+	width: 100%;
+	background-color: #000000;
+	align-items: center;
+	justify-content: center;
+	height: 32px;
+	padding: 0px 0px 4px 0px;
+	position: fixed;
+	display: flex;
+}
+
+header span {
+	padding-left:4px;
+	padding-right: 4px;
+}
+
+h2 {
+	text-align: center;
+	margin: 4px 0px 0px 0px;
+}
+
+#infoShow{
+	display: block;
+	position: relative;
+	width: 192px;
+	align-items: right;
+	justify-content: right;
+	text-align: right;
+	right: 0;
+	cursor: help;
+}
+
+#printLink {
+	cursor:default
+}
+
+#info {
+	padding-top: 8px;
+	padding: 4px;
+	border: 2px solid #565656;	
+}
+
+#infoHide {
+	background-color: #565656;
+	text-align: right;
+	padding-top: 0px;
+	cursor: alias;	
+}
+
+article span {
+	visibility: hidden;
+	display:none;
+}
+	
+aside {
+	float: left;
+	border: 0px solid black;
+    margin: 4px;
+    padding: 4px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+    text-align: center;
+    width: 184px;
+}
+	
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background-color:black;
+	text-align: center;
+}
+
+footer a:hover {
+	cursor: pointer;
+}
+
+button {	
+	padding: 1px 30px;
+	width: 198px;
+	margin: 1px;
+	background-color: black;
+	color: white;
+}
+
+textarea {	
+	resize: none;
+	overflow: hidden;
+	text-transform: uppercase;
+}
+	
+.centeredContainer {
+	margin: auto;
+	width: 600px;
+	min-height: 900px;
+	border: 0px solid black;
+	padding: 0px 20px 20px 20px;
+}
+
+#board15x15 {
+	width: 570px; 
+	height: 570px;
+	background-color: white;
+	color: black;
+    margin: 10px 20px 20px 10px; 
+    display:table; 
+	border: 2px solid black;	
+	padding: 0px;
+	margin-left: 21px;
+	font-size: 16px;
+	-webkit-user-select: none; /* Safari 3.1+ */
+	-moz-user-select: none; /* Firefox 2+ */
+	-ms-user-select: none; /* IE 10+ */
+	user-select: none; /* Standard syntax */
+}
+
+#board9x9 {
+	width: 513px; 
+	height: 513px;
+	background-color: white;
+	color: black;
+    margin: 10px 20px 20px 10px; 
+    display:table; 
+	border: 2px solid black;	
+	padding: 0px;
+	margin-left: 48px;
+	font-size: 32px;
+	-webkit-user-select: none; /* Safari 3.1+ */
+	-moz-user-select: none; /* Firefox 2+ */
+	-ms-user-select: none; /* IE 10+ */
+	user-select: none; /* Standard syntax */ 
+}
+
+.box-row {
+	margin: 0 auto;
+	border: 0px solid black;
+    padding: 0px;
+	display: table-row;
+}
+
+.box-cell {
+	width: 36px;
+	height: 36px;
+    border: 1px solid black;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    display: table-cell;
+	text-align: center;
+	background-color: white;	
+	vertical-align: middle;
+	line-height: 32px; 
+	justify-content: center;
+}

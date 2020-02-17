@@ -1,0 +1,50 @@
+html {
+	/*czcionka do druku*/
+	font-family: TimesNewRoman, "Times New Roman", Times, Georgia, serif;
+	color: black;
+	background: none;
+	text-shadow: none;
+}
+	
+body {
+	visibility: hidden;
+	/*czcionka do druku*/
+		font-family: TimesNewRoman, "Times New Roman", Times, Georgia, serif;
+		color: black;
+		background: none;
+		text-shadow: none;
+}	
+
+aside {
+		visibility: hidden;
+		display: none;
+}
+
+.druk {
+	visibility: visible;
+	margin: 0 auto;
+	display:block;
+	top: 32px;
+	bottom: 0px;
+	max-width: 600px;
+}
+
+#info {
+	visibility: hidden;
+	display: none;
+	
+}
+
+article span {
+	visibility: visible;
+	display: block;
+	color: black;
+	line-height: 150%;
+	padding: 32px !important;
+
+}
+
+div.box-cell {
+	
+	background-color: white !important;
+}
