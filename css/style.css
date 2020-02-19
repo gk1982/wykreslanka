@@ -88,6 +88,19 @@ footer {
 
 footer a:hover {
 	cursor: pointer;
+	color: silver !important;
+}
+
+footer a:link {
+	color: #646464;
+}
+
+footer a:visited {
+	color: #646464;
+}
+
+footer a:active {
+	color: #646464;
 }
 
 button {	
