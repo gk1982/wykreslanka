@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="pl">
+
 <head>
 	<title>Wykreślanka</title>
 	<meta charset="utf-8">
@@ -13,7 +14,6 @@
 </head>
 
 <body>
-
 <header class="top-baner">
 <h2>WYKREŚLANKA</h2>
 <span id="infoShow">Więcej informacji</span>
@@ -22,53 +22,149 @@
 
 <article class="centeredContainer">
 
+<div class="infoWindow">
 <div id="infoHide">x&nbsp;</div>
 <div id="info">
+Dla planszy w kształcie koła podaj do czterech wyrazów lub literę.<br>
 Dla planszy 9x9, podaj do siedmiu wyrazów, maksymalnie siedmioliterowych.<br>
 Dla planszy 15x15, podaj do dwunastu wyrazów, maksymalnie dwunastoliterowych.<br>
 Każdy wyraz oddziel enterem. Program przygotowuje wykreślankę do wydruku.<br>
-Program dostosowany jest do przegladarki Firefox.<br>
+Program wykreślanka do druku dostosowany jest do przeglądarki <font class="firefox">Firefox</font>.
+</div>
 </div>
 
 <aside>
-	<button id="wyczysc9x9">Plansza 9x9</button><br>
-	<button id="imiona">Imiona</button><br>
-	<button id="pory">Pory roku</button><br>
-	<button id="drzewa9x9">Drzewa</button><br>
-	<button id="rzeki">Rzeki</button><br>
-	<button id="panstwa">Państwa</button><br>
-	<button id="alfabet_grecki9x9">Alfabet grecki</button><br>
+	<br>
+	<button id="kolo">Koło</button><br><br>
+	<button id="wyczysc9x9">Plansza 9x9</button><br><br>
+	<button id="wyczysc15x15">Plansza 15x15</button><br><br>
 </aside>
 
 <aside>
-	<button id="wyczysc15x15">Plansza 15x15</button><br>
-	<button id="dni_tygodnia">Dni tygodnia</button><br>
-	<button id="miesiace">Miesiące</button><br>
-	<button id="drzewa15x15">Drzewa</button><br>
-	<button id="wojewodztwa">Województwa</button><br>
-	<button id="angielskie">Angielskie</button><br>
-	<button id="alfabet_grecki15x15">Alfabet grecki</button><br>
+	<br>
+	<select id="readyWordsCircle">
+		<option value="" selected disabled>Wybierz gotowe wyrazy</option>
+		<option value="box">Wyrazy z pola tekstowego</option>
+		<option value="names">Imiona</option>
+		<option value="seasons">Pory roku</option>
+	</select>
+	<br><br>
+	
+	<select id="readyWords9x9">
+		<option value="" selected disabled>Wybierz gotowe wyrazy</option>
+		<option value="box">Wyrazy z pola tekstowego</option>
+		<option value="names">Imiona</option>
+		<option value="seasons">Pory roku</option>
+		<option value="trees">Drzewa</option>
+		<option value="river">Rzeki</option>
+		<option value="countries">Państwa</option>
+		<option value="greekAlphabet">Alfabet grecki</option>
+	</select>
+	<br><br>
+	
+	<select id="readyWords15x15">
+		<option value="" selected disabled>Wybierz gotowe wyrazy</option>
+		<option value="box">Wyrazy z pola tekstowego</option>
+		<option value="names">Imiona</option>
+		<option value="months">Miesiące</option>
+		<option value="daysOfWeek">Dni tygodnia</option>
+		<option value="trees">Drzewa</option>
+		<option value="provinces">Województwa</option>
+		<option value="english">Angielskie</button><br>
+		<option value="greekAlphabet">Alfabet grecki</button><br>
+	</select>
+	<br><br>
 </aside>
 
 <aside>
 <p>Wyrazy:</p>
-<textarea id="podane_wyrazy" rows="13" cols="12" maxlength="157" spellcheck="false"></textarea> 
+<textarea id="given_words" rows="13" cols="12" maxlength="157" spellcheck="false"></textarea> 
 </aside>
 
-<aside>
-	<button id="generuj_wykreslanke_poziomo">Wykreślanka pozioma</button>
-</aside>
 
-<aside>
-	<button id="generuj_wykreslanke_pionowo">Wykreślanka pionowa</button>
-</aside>
+<span id="title" class="print"><h1>Wykreślanka</h1><br>Znajdź podane wyrazy:</span>
+<span id="slowa" class="print"></span>
 
-<aside>
-	<button id="generuj_wykreslanke_losowo">Wykreślanka losowa</button>
-</aside>
 
-<span id="slowa" class="druk"></span>
-<div class="board druk">
+<div class="board print">
+<div id="boardCircle">
+		<h1>
+		<span id="circle0char0">A</span>
+		<span id="circle0char1">B</span>
+		<span id="circle0char2">B</span>
+		<span id="circle0char3">A</span>
+		<span id="circle0char4">B</span>
+		<span id="circle0char5">C</span>
+		<span id="circle0char6">A</span>
+		<span id="circle0char7">B</span>
+		<span id="circle0char8">B</span>
+		<span id="circle0char9">A</span>
+		<span id="circle0char10">B</span>
+		<span id="circle0char11">C</span>
+		<span id="circle0char12">C</span>
+		<span id="circle0char13">C</span>
+		<span id="circle0char14">C</span>
+		<span id="circle0char15">C</span>
+		<span id="circle0char16">A</span>
+		<span id="circle0char17">B</span>
+		<span id="circle0char18">B</span>
+		<span id="circle0char19">A</span>
+		<span id="circle0char20">B</span>
+		<span id="circle0char21">C</span>
+		<span id="circle0char22">B</span>
+		<span id="circle0char23">C</span>
+		</h1>
+		
+		<h2>
+		<span id="circle1char0">A</span>
+		<span id="circle1char1">B</span>
+		<span id="circle1char2">C</span>
+		<span id="circle1char3">D</span>
+		<span id="circle1char4">E</span>
+		<span id="circle1char5">F</span>
+		<span id="circle1char6">G</span>
+		<span id="circle1char7">H</span>
+		<span id="circle1char8">I</span>
+		<span id="circle1char9">J</span>
+		<span id="circle1char10">K</span>
+		<span id="circle1char11">L</span>
+		<span id="circle1char12">K</span>
+		<span id="circle1char13">L</span>
+		<span id="circle1char14">K</span>
+		<span id="circle1char15">L</span>
+		<span id="circle1char16">G</span>
+		<span id="circle1char17">H</span>
+		</h2>
+		
+		<h3>
+		<span id="circle2char0">A</span>
+		<span id="circle2char1">B</span>
+		<span id="circle2char2">C</span>
+		<span id="circle2char3">D</span>
+		<span id="circle2char4">E</span>
+		<span id="circle2char5">F</span>
+		<span id="circle2char6">G</span>
+		<span id="circle2char7">H</span>
+		<span id="circle2char8">I</span>
+		<span id="circle2char9">J</span>
+		<span id="circle2char10">K</span>
+		<span id="circle2char11">L</span>
+		</h3>
+		
+		<h4>
+		<span id="circle3char0">A</span>
+		<span id="circle3char1">B</span>
+		<span id="circle3char2">C</span>
+		<span id="circle3char3">D</span>
+		<span id="circle3char4">E</span>
+		<span id="circle3char5">F</span>
+		<span id="circle3char6">G</span>
+		<span id="circle3char7">H</span>
+		</h4>
+
+</div>
+
+
 
 <div id="board15x15">
 		

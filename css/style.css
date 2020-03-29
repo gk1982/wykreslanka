@@ -1,4 +1,6 @@
 html {
+	min-height: 100%;
+	min-width:100%;
 	margin: 0;
 	padding: 0;
 }
@@ -7,6 +9,7 @@ body {
 	margin: 0 auto;
 	padding: 0;
 	background-color: #484848;
+	background: linear-gradient(90deg, rgba(255,255,255,0.64) 2%, rgba(72,72,72,1) 16%, rgba(72,72,72,1) 84%, rgba(255,255,255,0.64) 98%);
 	color: white;
 	font-family: TimesNewRoman, "Times New Roman", Times, Georgia, serif;
 	font-size: 16px;
@@ -33,6 +36,12 @@ header span {
 	padding: 0px 0px 4px 0px;
 	position: fixed;
 	display: flex;
+	z-index: 999;
+}
+
+.infoWindow{
+	position: absolute;
+	background-color: #696969;
 }
 
 #infoShow{
@@ -50,16 +59,26 @@ header span {
 }
 
 #info {
+
 	padding-top: 8px;
 	padding: 4px;
 	border: 2px solid #565656;	
 }
 
 #infoHide {
+
 	background-color: #565656;
 	text-align: right;
 	padding-top: 0px;
 	cursor: alias;	
+}
+
+.firefox {
+	background-image: -moz-linear-gradient(left, yellow 0%, red 66%, purple 100%);
+	background-image: -webkit-linear-gradient(left, yellow 0%, red 50%, purple 100%);
+	color:transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
 }
 
 article span {
@@ -67,8 +86,6 @@ article span {
 	display:none;
 }
 	
-
-
 aside {
 	float: left;
 	border: 0px solid black;
@@ -79,6 +96,7 @@ aside {
     text-align: center;
     width: 184px;
 }
+
 aside p {
 	margin: 0;
 	padding: 0;
@@ -111,12 +129,28 @@ footer a:active {
 	color: #727272;
 }
 
+br {
+	margin: 0px;
+	padding: 0px;
+}
+
 button {	
-	padding: 1px 30px;
+	padding: 1px 32px;
 	width: 198px;
-	margin: 1px;
+	margin-top: 0px;
 	background-color: black;
 	color: white;
+	z-index: 888;
+}
+
+select {
+	min-height: 22px;
+	padding: 0px 2px;
+	width: 198px;
+	margin-top: 0px;
+	background-color: black;
+	color: white;
+	z-index: 888;
 }
 
 textarea {	
@@ -131,6 +165,314 @@ textarea {
 	min-height: 900px;
 	border: 0px solid black;
 	padding: 36px 16px 16px 16px;
+}
+
+#boardCircle {
+	 width: 540px; 
+	height: 540px;
+	background-color: white;
+	color: black;
+	margin: 0 auto;
+	display:table; 
+	border: 2px solid black;	
+	padding: 0px;
+	margin-left: 18px;
+	border-radius: 50%;
+	transform: rotate(0deg);
+	-webkit-user-select: none; /* Safari 3.1+ */
+	-moz-user-select: none; /* Firefox 2+ */
+	-ms-user-select: none; /* IE 10+ */
+	user-select: none; /* Standard syntax */ 
+ 	
+}
+
+h1 span {
+  height: 255px;
+  position: fixed;
+  left: 265px;
+  
+  transform-origin: bottom center;
+  visibility: visible;
+  display: block;
+}
+
+h2 span {
+  height: 195px;
+  position: fixed;
+  top: 75px;
+  left: 265px;
+  transform-origin: bottom center;
+  visibility: visible;
+  display: block;
+}
+
+h3 span {
+  height: 135px;
+  position: fixed;
+  top: 135px;
+  left: 265px;
+  transform-origin: bottom center;
+  visibility: visible;
+  display: block;
+}
+
+h4 span {
+  height: 75px;
+  position: fixed;
+  top: 195px;
+  left: 265px;
+  transform-origin: bottom center;
+  visibility: visible;
+  display: block;
+}
+
+#circle0char0 {
+  transform: rotate(15deg);
+}
+
+#circle0char1 {
+  transform: rotate(30deg);
+}
+
+#circle0char2 {
+  transform: rotate(45deg);
+}
+
+#circle0char3 {
+  transform: rotate(60deg);
+}
+
+#circle0char4 {
+  transform: rotate(75deg);
+}
+
+#circle0char5 {
+  transform: rotate(90deg);
+}
+
+#circle0char6 {
+  transform: rotate(105deg);
+}
+
+#circle0char7 {
+  transform: rotate(120deg);
+}
+
+#circle0char8 {
+  transform: rotate(135deg);
+}
+
+#circle0char9 {
+  transform: rotate(150deg);
+}
+
+#circle0char10 {
+  transform: rotate(165deg);
+}
+
+#circle0char11 {
+  transform: rotate(180deg);
+}
+
+#circle0char12 {
+  transform: rotate(195deg);
+}
+
+#circle0char13 {
+  transform: rotate(210deg);
+}
+
+#circle0char14 {
+  transform: rotate(225deg);
+}
+
+#circle0char15 {
+  transform: rotate(240deg);
+}
+
+#circle0char16 {
+  transform: rotate(255deg);
+}
+
+#circle0char17 {
+  transform: rotate(270deg);
+}
+
+#circle0char18 {
+  transform: rotate(285deg);
+}
+
+#circle0char19 {
+  transform: rotate(300deg);
+}
+
+#circle0char20 {
+  transform: rotate(315deg);
+}
+
+#circle0char21 {
+  transform: rotate(330deg);
+}
+
+#circle0char22 {
+  transform: rotate(345deg);
+}
+
+#circle0char23 {
+  transform: rotate(360deg);
+}
+
+
+#circle1char0 {
+  transform: rotate(20deg);
+}
+
+#circle1char1 {
+  transform: rotate(40deg);
+}
+
+#circle1char2 {
+  transform: rotate(60deg);
+}
+
+#circle1char3 {
+  transform: rotate(80deg);
+}
+
+#circle1char4 {
+  transform: rotate(100deg);
+}
+
+#circle1char5 {
+  transform: rotate(120deg);
+}
+
+#circle1char6 {
+  transform: rotate(140deg);
+}
+
+#circle1char7 {
+  transform: rotate(160deg);
+}
+
+#circle1char8 {
+  transform: rotate(180deg);
+}
+
+#circle1char9 {
+  transform: rotate(200deg);
+}
+
+#circle1char10 {
+  transform: rotate(220deg);
+}
+
+#circle1char11 {
+  transform: rotate(240deg);
+}
+
+#circle1char12 {
+  transform: rotate(260deg);
+}
+
+#circle1char13 {
+  transform: rotate(280deg);
+}
+
+#circle1char14 {
+  transform: rotate(300deg);
+}
+
+#circle1char15 {
+  transform: rotate(320deg);
+}
+
+#circle1char16 {
+  transform: rotate(340deg);
+}
+
+#circle1char17 {
+  transform: rotate(360deg);
+}
+
+#circle2char0 {
+  transform: rotate(30deg);
+}
+
+#circle2char1 {
+  transform: rotate(60deg);
+}
+
+#circle2char2 {
+  transform: rotate(90deg);
+}
+
+#circle2char3 {
+  transform: rotate(120deg);
+}
+
+#circle2char4 {
+  transform: rotate(150deg);
+}
+
+#circle2char5 {
+  transform: rotate(180deg);
+}
+
+#circle2char6 {
+  transform: rotate(210deg);
+}
+
+#circle2char7 {
+  transform: rotate(240deg);
+}
+
+#circle2char8 {
+  transform: rotate(270deg);
+}
+
+#circle2char9 {
+  transform: rotate(300deg);
+}
+
+#circle2char10 {
+  transform: rotate(330deg);
+}
+
+#circle2char11 {
+  transform: rotate(360deg);
+}
+
+#circle3char0 {
+  transform: rotate(45deg);
+}
+
+#circle3char1 {
+  transform: rotate(90deg);
+}
+
+#circle3char2 {
+  transform: rotate(135deg);
+}
+
+#circle3char3 {
+  transform: rotate(180deg);
+}
+
+#circle3char4 {
+  transform: rotate(225deg);
+}
+
+#circle3char5 {
+  transform: rotate(270deg);
+}
+
+#circle3char6 {
+  transform: rotate(315deg);
+}
+
+#circle3char7 {
+  transform: rotate(360deg);
 }
 
 #board15x15 {

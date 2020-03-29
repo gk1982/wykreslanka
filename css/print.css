@@ -1,5 +1,4 @@
 html {
-	/*czcionka do druku*/
 	font-family: TimesNewRoman, "Times New Roman", Times, Georgia, serif;
 	color: black;
 	background: none;
@@ -8,23 +7,22 @@ html {
 	
 body {
 	visibility: hidden;
-	/*czcionka do druku*/
-		font-family: TimesNewRoman, "Times New Roman", Times, Georgia, serif;
-		color: black;
-		background: none;
-		text-shadow: none;
+	font-family: TimesNewRoman, "Times New Roman", Times, Georgia, serif;
+	color: black;
+	background: none;
+	text-shadow: none;
 }	
 
 aside {
-		visibility: hidden;
-		display: none;
+	visibility: hidden;
+	display: none;
 }
 
-.druk {
+.print {
 	visibility: visible;
 	margin: 0 auto;
 	display:block;
-	top: 32px;
+	top: 8px;
 	bottom: 0px;
 	max-width: 600px;
 }
@@ -38,13 +36,15 @@ aside {
 article span {
 	visibility: visible;
 	display: block;
-	color: black;
 	line-height: 150%;
-	padding: 32px !important;
+}
 
+.board {
+	color: black !important;
+	margin-top: 32px !important;
+	margin-bottom: 32px !important;
 }
 
 div.box-cell {
-	
 	background-color: white !important;
 }
