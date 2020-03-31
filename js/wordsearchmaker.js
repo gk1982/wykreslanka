@@ -30,20 +30,20 @@ $(document).ready(function () {
 displayBoard(default_board_size);
 $("#infoShow").show();
 $("#infoHide").hide();
-$("#info").hide();
-$("select").val("");
+$(".infoWindow").hide();
+$("select").val("box");
 });
 
 //hide the info
 $("#infoHide").click(function(){
-$("#info").hide();
+$(".infoWindow").hide();
 $("#infoHide").hide();
 });
 
 //show the info
 $("#infoShow").click(function(){
 $("#infoHide").show();
-$("#info").show();
+$(".infoWindow").show();
 });
 
 //display boards about the size of 9x9 or 15x15, board_type: 9 or 15
@@ -109,9 +109,9 @@ $("#boardCircle").removeClass('hide');
 }
 }
 
-$("#kolo").click(function() {
+$("#circle").click(function() {
 
-$("select").val("");
+$("select").val("box");
 words=[];
 board_size=0;
 displayBoard(0);
@@ -119,17 +119,28 @@ displayBoard(0);
 });
 
 $("#wyczysc15x15").click(function() {
-$("select").val("");	
+$("select").val("box");
 words = [];
 board_size=15;
 displayBoard(15);
 });
 
-$("#wyczysc9x9").click(function() {
-$("select").val("");	
+$("#boardBtn9x9").click(function() {
+$("select").val("box");
 words = [];
 board_size=9;
 displayBoard(9);
+});
+
+$("#generateButton").click(function() {
+	if(board_size==0) {
+		displayBoard(board_size);
+		wypelnij_plansze_kolo_slowami();
+	}
+	else {
+	displayBoard(board_size);
+	fillBoardWithWords();
+	}
 });
 
 $("#given_words").on("input propertychange keydown", function(e) {
@@ -137,6 +148,7 @@ $("#given_words").on("input propertychange keydown", function(e) {
 
 	var val = $.trim($("textarea").val().toUpperCase());
     if (val != ""){
+		if(val.slice(-1)!="\n") val=val+"\n";
 	words = val.split("\n");
 	var str = words+"";
 	str = str.replace(/\,/g,",\n");
@@ -265,7 +277,10 @@ $("#generuj_wykreslanke_losowo").click(function() {
 //firefox
 $('#readyWordsCircle option').on('click', function(){
 	var value = this.value;
+	
+	
 	if(value=="box") {
+		if(board_size!=0) words=[];
 		board_size=0;
 		displayBoard(0);
 		wypelnij_plansze_kolo_slowami();
@@ -277,18 +292,22 @@ $('#readyWordsCircle option').on('click', function(){
 		wypelnij_plansze_kolo_slowami();
 	}
 	else if(value=="seasons") {
-		words = ['WIOSNA','LATO','JESIEŃ','ZIMA'];
+		words = ['WIOSNA','JESIEŃ','LATO','ZIMA'];
 		board_size=0;
 		displayBoard(0);
 		wypelnij_plansze_kolo_slowami();
 	}
+	$("select").val("box");
 });
 
 //chrome
 $('#readyWordsCircle').on('click', function(ev){
 	if((ev.offsetY < 0) && (navigator.userAgent.search("Chrome") >= 0)){
 	var value = this.value;
+	
+	
 	if(value=="box") {
+		if(board_size!=0) words=[];
 		board_size=0;
 		displayBoard(0);
 		wypelnij_plansze_kolo_slowami();
@@ -305,6 +324,7 @@ $('#readyWordsCircle').on('click', function(ev){
 		displayBoard(0);
 		wypelnij_plansze_kolo_slowami();
 	}
+	$("select").val("box");	
 	}
 });
 
@@ -316,6 +336,7 @@ $('#readyWords9x9 option').on('click', function(){
 	var value = this.value;
 	
 	if(value=="box") {
+		if(board_size!=9) words=[];
 		board_size=9;
 		displayBoard(board_size);
 		fillBoardWithWords();
@@ -350,13 +371,17 @@ $('#readyWords9x9 option').on('click', function(){
 		displayBoard(9);
 		fillBoardWithWords();
 	}  
+	$("select").val("box");
 });
 
 //chrome
 $('#readyWords9x9').on('click', function(ev){
 	if((ev.offsetY < 0) && (navigator.userAgent.search("Chrome") >= 0)){
 	var value = this.value;
+	
+	
 	if(value=="box") {
+		if(board_size!=9) words=[];
 		board_size=9;
 		displayBoard(board_size);
 		fillBoardWithWords();
@@ -391,6 +416,7 @@ $('#readyWords9x9').on('click', function(ev){
 		displayBoard(9);
 		fillBoardWithWords();
 	}  
+	$("select").val("box");
     }
 });
 
@@ -398,9 +424,13 @@ $('#readyWords9x9').on('click', function(ev){
 //firefox
 
 $("#readyWords15x15 option").on('click', function(){
+	
 	var value = this.value;
 	
+	
+	
 	if(value=="box") {
+		if(board_size!=15) words=[];
 		board_size=15;
 		displayBoard(board_size);
 		fillBoardWithWords();
@@ -440,6 +470,7 @@ $("#readyWords15x15 option").on('click', function(){
 		displayBoard(15);
 		fillBoardWithWords();
 	}
+	$("select").val("box");
 });
 
 //chrome
@@ -447,7 +478,10 @@ $("#readyWords15x15").on('click', function(ev){
 	
 	if((ev.offsetY < 0) && (navigator.userAgent.search("Chrome") >= 0)){
 		var value = this.value;
+		
+		
 	if(value=="box") {
+		if(board_size!=15) words=[];
 		board_size=15;
 		displayBoard(board_size);
 		fillBoardWithWords();
@@ -487,6 +521,7 @@ $("#readyWords15x15").on('click', function(ev){
 		displayBoard(15);
 		fillBoardWithWords();
 	}
+	$("select").val("box");
 	}
 });
 

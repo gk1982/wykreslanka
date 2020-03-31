@@ -11,7 +11,7 @@ body {
 	background-color: #484848;
 	background: linear-gradient(90deg, rgba(255,255,255,0.64) 2%, rgba(72,72,72,1) 16%, rgba(72,72,72,1) 84%, rgba(255,255,255,0.64) 98%);
 	color: white;
-	font-family: TimesNewRoman, "Times New Roman", Times, Georgia, serif;
+	font-family: Roboto, Georgia, sans-serif;
 	font-size: 16px;
 	overflow-y: scroll;	
 }
@@ -42,6 +42,10 @@ header span {
 .infoWindow{
 	position: absolute;
 	background-color: #696969;
+	border: 2px solid #696969;
+	border-radius: 2px;
+
+	
 }
 
 #infoShow{
@@ -50,6 +54,7 @@ header span {
 	align-items: right;
 	justify-content: right;
 	text-align: right;
+	
 	right: 0;
 	cursor: help;
 }
@@ -104,6 +109,29 @@ aside p {
 	text-align:center;
 }
 
+
+
+header a:hover {
+	cursor: default;
+	text-decoration: none;
+	color: white !important;
+}
+
+header a:link {
+	text-decoration: none;
+	color: white;
+}
+
+header a:visited {
+	text-decoration: none;
+	color: white;
+}
+
+header a:active {
+	text-decoration: none;
+	color: white;
+}
+
 footer {
 	position: fixed;
 	bottom: 0;
@@ -111,7 +139,6 @@ footer {
 	background-color:black;
 	text-align: center;
 }
-
 footer a:hover {
 	cursor: pointer;
 	color: silver !important;
@@ -139,10 +166,16 @@ button {
 	width: 198px;
 	margin-top: 0px;
 	background-color: black;
+	border-radius: 4px;
 	color: white;
 	z-index: 888;
 }
-
+button:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
+	
+}
 select {
 	min-height: 22px;
 	padding: 0px 2px;
@@ -150,13 +183,31 @@ select {
 	margin-top: 0px;
 	background-color: black;
 	color: white;
+	border-radius: 4px;
 	z-index: 888;
+}
+
+select:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
+	
 }
 
 textarea {	
 	resize: none;
 	overflow: hidden;
 	text-transform: uppercase;
+	border: 2px solid silver;
+	border-radius: 4px;
+}
+
+textarea:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
 }
 	
 .centeredContainer {
@@ -176,7 +227,7 @@ textarea {
 	display:table; 
 	border: 2px solid black;	
 	padding: 0px;
-	margin-left: 18px;
+	margin-left: 32px;
 	border-radius: 50%;
 	transform: rotate(0deg);
 	-webkit-user-select: none; /* Safari 3.1+ */
@@ -484,7 +535,7 @@ h4 span {
     display:table; 
 	border: 2px solid black;	
 	padding: 0px;
-	margin-left: 21px;
+	margin-left: 13px;
 	font-size: 16px;
 	-webkit-user-select: none; /* Safari 3.1+ */
 	-moz-user-select: none; /* Firefox 2+ */
@@ -501,7 +552,7 @@ h4 span {
     display:table; 
 	border: 2px solid black;	
 	padding: 0px;
-	margin-left: 48px;
+	margin-left: 42px;
 	font-size: 32px;
 	-webkit-user-select: none; /* Safari 3.1+ */
 	-moz-user-select: none; /* Firefox 2+ */
@@ -526,6 +577,6 @@ h4 span {
 	text-align: center;
 	background-color: white;	
 	vertical-align: middle;
-	line-height: 32px; 
+	line-height: 1.6; 
 	justify-content: center;
 }

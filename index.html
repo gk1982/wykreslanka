@@ -14,8 +14,9 @@
 </head>
 
 <body>
+
 <header class="top-baner">
-<h2>WYKREŚLANKA</h2>
+<h2><a href="">WYKREŚLANKA</a></h2>
 <span id="infoShow">Więcej informacji</span>
 <span id="printLink" onclick="window.print();">Drukuj</span>
 </header>
@@ -35,24 +36,24 @@ Program wykreślanka do druku dostosowany jest do przeglądarki <font class="fir
 
 <aside>
 	<br>
-	<button id="kolo">Koło</button><br><br>
-	<button id="wyczysc9x9">Plansza 9x9</button><br><br>
+	<button id="circle">Koło</button><br><br>
+	<button id="boardBtn9x9">Plansza 9x9</button><br><br>
 	<button id="wyczysc15x15">Plansza 15x15</button><br><br>
 </aside>
 
 <aside>
 	<br>
 	<select id="readyWordsCircle">
-		<option value="" selected disabled>Wybierz gotowe wyrazy</option>
-		<option value="box">Wyrazy z pola tekstowego</option>
+		
+		<option value="box" selected>Wyrazy z pola tekstowego</option>
 		<option value="names">Imiona</option>
 		<option value="seasons">Pory roku</option>
 	</select>
 	<br><br>
 	
 	<select id="readyWords9x9">
-		<option value="" selected disabled>Wybierz gotowe wyrazy</option>
-		<option value="box">Wyrazy z pola tekstowego</option>
+	
+		<option value="box" selected>Wyrazy z pola tekstowego</option>
 		<option value="names">Imiona</option>
 		<option value="seasons">Pory roku</option>
 		<option value="trees">Drzewa</option>
@@ -63,8 +64,8 @@ Program wykreślanka do druku dostosowany jest do przeglądarki <font class="fir
 	<br><br>
 	
 	<select id="readyWords15x15">
-		<option value="" selected disabled>Wybierz gotowe wyrazy</option>
-		<option value="box">Wyrazy z pola tekstowego</option>
+	
+		<option value="box" selected>Wyrazy z pola tekstowego</option>
 		<option value="names">Imiona</option>
 		<option value="months">Miesiące</option>
 		<option value="daysOfWeek">Dni tygodnia</option>
@@ -74,6 +75,8 @@ Program wykreślanka do druku dostosowany jest do przeglądarki <font class="fir
 		<option value="greekAlphabet">Alfabet grecki</button><br>
 	</select>
 	<br><br>
+	
+	<button id="generateButton">Generuj</button>
 </aside>
 
 <aside>

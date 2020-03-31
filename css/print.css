@@ -1,5 +1,5 @@
 html {
-	font-family: TimesNewRoman, "Times New Roman", Times, Georgia, serif;
+	font-family: Roboto, Georgia, serif;
 	color: black;
 	background: none;
 	text-shadow: none;
@@ -7,7 +7,7 @@ html {
 	
 body {
 	visibility: hidden;
-	font-family: TimesNewRoman, "Times New Roman", Times, Georgia, serif;
+	font-family: Roboto, Georgia, serif;
 	color: black;
 	background: none;
 	text-shadow: none;
@@ -36,7 +36,7 @@ aside {
 article span {
 	visibility: visible;
 	display: block;
-	line-height: 150%;
+	line-height: 1.6;
 }
 
 .board {
