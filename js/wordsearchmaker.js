@@ -143,21 +143,21 @@ $("#generateButton").click(function() {
 	}
 });
 
-$("#given_words").on("input propertychange keydown", function(e) {
-    if((e.keyCode < 91) && (e.keyCode > 64) || e.keyCode == 13 || e.keyCode == 8 || (e.keyCode < 41) && (e.keyCode > 36)){
-
-	var val = $.trim($("textarea").val().toUpperCase());
-    if (val != ""){
-		if(val.slice(-1)!="\n") val=val+"\n";
-	words = val.split("\n");
-	var str = words+"";
-	str = str.replace(/\,/g,",\n");
-	$("#slowa").text(str);
-	}
+/*
+*	Event handler retrieves words from the text field and formats them by removing unnecessary lines and spaces and raising to uppercase.
+*/
+$("#given_words").on("keyup", function(e) {
+  if((e.keyCode < 91) && (e.keyCode > 64) || e.keyCode == 13 || e.keyCode == 8 || (e.keyCode < 41) && (e.keyCode > 36)){
+  var val = $.trim($("#given_words").val());
+    if (val != "") {
+    val = val.replace(/^\s*[\r\n]/gm, '');
+    val = val.toUpperCase();
+    words = val.split("\n");
     }
-	else{
-	e.preventDefault();
-	}
+  }
+  else {
+    e.preventDefault();
+  }
 });
 
 function wypelnij_plansze_losowo_slowami() {
