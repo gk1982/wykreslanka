@@ -1,221 +1,215 @@
 html {
-	min-height: 100%;
-	min-width:100%;
-	margin: 0;
-	padding: 0;
+  min-height: 100%;
+  min-width:100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-	margin: 0 auto;
-	padding: 0;
-	background-color: #484848;
-	background: linear-gradient(90deg, rgba(255,255,255,0.64) 2%, rgba(72,72,72,1) 16%, rgba(72,72,72,1) 84%, rgba(255,255,255,0.64) 98%);
-	color: white;
-	font-family: Roboto, Georgia, sans-serif;
-	font-size: 16px;
-	overflow-y: scroll;	
+  margin: 0 auto;
+  padding: 0;
+  background-color: #484848;
+  background: linear-gradient(90deg, rgba(255,255,255,0.64) 2%, rgba(72,72,72,1) 16%, rgba(72,72,72,1) 84%, rgba(255,255,255,0.64) 98%);
+  color: white;
+  font-family: Roboto, Georgia, sans-serif;
+  font-size: 16px;
+  overflow-y: scroll;
 }
 
 header h2 {
-	text-align: center;
-	margin: 4px 0px 0px 0px;
-	padding: 0px;
+  text-align: center;
+  margin: 4px 0px 0px 0px;
+  padding: 0px;
 }
 
 header span {
-	padding-left:4px;
-	padding-right: 4px;
+  padding-left:4px;
+  padding-right: 4px;
 }
 
 .top-baner {
-	width: 100%;
-	background-color: #000000;
-	align-items: center;
-	justify-content: center;
-	height: 32px;
-	padding: 0px 0px 4px 0px;
-	position: fixed;
-	display: flex;
-	z-index: 999;
+  width: 100%;
+  background-color: #000000;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 0px 0px 4px 0px;
+  position: fixed;
+  display: flex;
+  z-index: 999;
 }
 
-.infoWindow{
-	position: absolute;
-	background-color: #696969;
-	border: 2px solid #696969;
-	border-radius: 2px;
-
-	
+.infoWindow {
+  position: absolute;
+  background-color: #696969;
+  border: 2px solid #696969;
+  border-radius: 2px;
 }
 
-#infoShow{
-	position: relative;
-	width: 192px;
-	align-items: right;
-	justify-content: right;
-	text-align: right;
-	
-	right: 0;
-	cursor: help;
+#infoShow {
+  position: relative;
+  width: 192px;
+  align-items: right;
+  justify-content: right;
+  text-align: right;
+  right: 0;
+  cursor: help;
 }
 
 #printLink {
-	cursor:default
+  cursor:default;
 }
 
 #info {
-
-	padding-top: 8px;
-	padding: 4px;
-	border: 2px solid #565656;	
+  padding-top: 8px;
+  padding: 4px;
+  border: 2px solid #565656;
 }
 
 #infoHide {
-
-	background-color: #565656;
-	text-align: right;
-	padding-top: 0px;
-	cursor: alias;	
+  background-color: #565656;
+  text-align: right;
+  padding-top: 0px;
+  cursor: alias;
 }
 
 .firefox {
-	background-image: -moz-linear-gradient(left, yellow 0%, red 66%, purple 100%);
-	background-image: -webkit-linear-gradient(left, yellow 0%, red 50%, purple 100%);
-	color:transparent;
-	-webkit-background-clip: text;
-	background-clip: text;
+  background-image: -moz-linear-gradient(left, yellow 0%, red 66%, purple 100%);
+  background-image: -webkit-linear-gradient(left, yellow 0%, red 50%, purple 100%);
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 article span {
-	visibility: hidden;
-	display:none;
+  visibility: hidden;
+  display:none;
 }
-	
+
 aside {
-	float: left;
-	border: 0px solid black;
-    margin: 4px;
-    padding: 4px;
-	padding-top: 0px;
-	padding-bottom: 0px;
-    text-align: center;
-    width: 184px;
+  float: left;
+  border: 0px solid black;
+  margin: 4px;
+  padding: 4px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  text-align: center;
+  width: 184px;
 }
 
 aside p {
-	margin: 0;
-	padding: 0;
-	padding-bottom: 2px;
-	text-align:center;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 2px;
+  text-align: center;
 }
 
-
-
 header a:hover {
-	cursor: default;
-	text-decoration: none;
-	color: white !important;
+  cursor: default;
+  text-decoration: none;
+  color: white !important;
 }
 
 header a:link {
-	text-decoration: none;
-	color: white;
+  text-decoration: none;
+  color: white;
 }
 
 header a:visited {
-	text-decoration: none;
-	color: white;
+  text-decoration: none;
+  color: white;
 }
 
 header a:active {
-	text-decoration: none;
-	color: white;
+  text-decoration: none;
+  color: white;
 }
 
 footer {
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-	background-color:black;
-	text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color:black;
+  text-align: center;
 }
+
 footer a:hover {
-	cursor: pointer;
-	color: silver !important;
+  cursor: pointer;
+  color: silver !important;
 }
 
 footer a:link {
-	color: #727272;
+  color: #727272;
 }
 
 footer a:visited {
-	color: #727272;
+  color: #727272;
 }
 
 footer a:active {
-	color: #727272;
+  color: #727272;
 }
 
 br {
-	margin: 0px;
-	padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
-button {	
-	padding: 1px 32px;
-	width: 198px;
-	margin-top: 0px;
-	background-color: black;
-	border-radius: 4px;
-	color: white;
-	z-index: 888;
+button {
+  padding: 1px 32px;
+  width: 198px;
+  margin-top: 0px;
+  background-color: black;
+  border-radius: 4px;
+  color: white;
+  z-index: 888;
 }
+
 button:focus {
     border-color: #80bdff;
     outline: 0;
     box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
-	
 }
+
 select {
-	min-height: 22px;
-	padding: 0px 2px;
-	width: 198px;
-	margin-top: 0px;
-	background-color: black;
-	color: white;
-	border-radius: 4px;
-	z-index: 888;
+  min-height: 22px;
+  padding: 0px 2px;
+  width: 198px;
+  margin-top: 0px;
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+  z-index: 888;
 }
 
 select:focus {
-    border-color: #80bdff;
-    outline: 0;
-    box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
-	
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
 }
 
-textarea {	
-	resize: none;
-	overflow: hidden;
-	text-transform: uppercase;
-	border: 2px solid silver;
-	border-radius: 4px;
+textarea {
+  resize: none;
+  overflow: hidden;
+  text-transform: uppercase;
+  border: 2px solid silver;
+  border-radius: 4px;
 }
 
 textarea:focus {
-    color: #495057;
-    background-color: #fff;
-    border-color: #80bdff;
-    outline: 0;
-    box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
 }
-	
+
 .centeredContainer {
-	margin: auto;
-	width: 600px;
-	min-height: 900px;
-	border: 0px solid black;
-	padding: 36px 16px 16px 16px;
+  margin: auto;
+  width: 600px;
+  min-height: 900px;
+  border: 0px solid black;
+  padding: 36px 16px 16px 16px;
 }
 
 #boardCircle {
@@ -225,7 +219,7 @@ textarea:focus {
 	color: black;
 	margin: 0 auto;
 	display:table; 
-	border: 2px solid black;	
+	border: 2px solid black;
 	padding: 0px;
 	margin-left: 32px;
 	border-radius: 50%;
