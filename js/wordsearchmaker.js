@@ -146,7 +146,8 @@ $("#generateButton").click(function() {
 /*
 *	Event handler retrieves words from the text field and formats them by removing unnecessary lines and spaces and raising to uppercase.
 */
-$("#given_words").on("keyup", function(e) {
+$("#given_words").on("keydown keyup", function(e) {
+	console.log(e.keyCode +" "+words);
   if((e.keyCode < 91) && (e.keyCode > 64) || e.keyCode == 13 || e.keyCode == 8 || (e.keyCode < 41) && (e.keyCode > 36)){
   var val = $.trim($("#given_words").val());
     if (val != "") {
@@ -156,7 +157,7 @@ $("#given_words").on("keyup", function(e) {
     }
   }
   else {
-    e.preventDefault();
+  e.preventDefault();
   }
 });
 
