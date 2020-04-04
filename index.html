@@ -2,15 +2,15 @@
 <html lang="pl">
 
 <head>
-	<title>Wykreślanka</title>
-	<meta charset="utf-8">
-	<meta name="description" content="Generator wykreślanki do wydruku.">
-	<meta name="keywords" content="generator wykreślanki, wykreślanka do druku, wykreślanka online">
-	<meta name="author" content="gk1982">
-	<link rel="icon" type="image/svg+xml" href="img/icon.svg"/>
-	<link rel="stylesheet" type="text/css" href="css/style.css"/>
-	<link rel="stylesheet" type="text/css" media="print" href="css/print.css"/>
-	<script src="js/jquery-3.4.1.js"></script>
+  <title>Wykreślanka</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Generator wykreślanki do wydruku.">
+  <meta name="keywords" content="generator wykreślanki, wykreślanka do druku, wykreślanka online">
+  <meta name="author" content="gk1982">
+  <link rel="icon" type="image/svg+xml" href="img/icon.svg"/>
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  <link rel="stylesheet" type="text/css" media="print" href="css/print.css"/>
+  <script src="js/jquery-3.4.1.js"></script>
 </head>
 
 <body>
@@ -35,48 +35,49 @@ Program wykreślanka do druku dostosowany jest do przeglądarki <font class="fir
 </div>
 
 <aside>
-	<br>
-	<button id="circle">Koło</button><br><br>
-	<button id="boardBtn9x9">Plansza 9x9</button><br><br>
-	<button id="wyczysc15x15">Plansza 15x15</button><br><br>
+  <br>
+  <button id="circle">Koło</button><br><br>
+  <button id="boardBtn9x9">Plansza 9x9</button><br><br>
+  <button id="wyczysc15x15">Plansza 15x15</button><br><br>
 </aside>
 
 <aside>
-	<br>
-	<select id="readyWordsCircle">
-		
-		<option value="box" selected>Wyrazy z pola tekstowego</option>
-		<option value="names">Imiona</option>
-		<option value="seasons">Pory roku</option>
-	</select>
-	<br><br>
-	
-	<select id="readyWords9x9">
-	
-		<option value="box" selected>Wyrazy z pola tekstowego</option>
-		<option value="names">Imiona</option>
-		<option value="seasons">Pory roku</option>
-		<option value="trees">Drzewa</option>
-		<option value="river">Rzeki</option>
-		<option value="countries">Państwa</option>
-		<option value="greekAlphabet">Alfabet grecki</option>
-	</select>
-	<br><br>
-	
-	<select id="readyWords15x15">
-	
-		<option value="box" selected>Wyrazy z pola tekstowego</option>
-		<option value="names">Imiona</option>
-		<option value="months">Miesiące</option>
-		<option value="daysOfWeek">Dni tygodnia</option>
-		<option value="trees">Drzewa</option>
-		<option value="provinces">Województwa</option>
-		<option value="english">Angielskie</button><br>
-		<option value="greekAlphabet">Alfabet grecki</button><br>
-	</select>
-	<br><br>
-	
-	<button id="generateButton">Generuj</button>
+  <br>
+  <select id="readyWordsCircle">
+    <option value="" selected>Wyrazy z pola tekstowego</option>
+    <option value="names">Imiona</option>
+    <option value="seasons">Pory roku</option>
+  </select>
+
+<br><br>
+
+<select id="readyWords9x9">
+  <option value="" selected>Wyrazy z pola tekstowego</option>
+  <option value="names">Imiona</option>
+  <option value="seasons">Pory roku</option>
+  <option value="trees">Drzewa</option>
+  <option value="river">Rzeki</option>
+  <option value="countries">Państwa</option>
+  <option value="greekAlphabet">Alfabet grecki</option>
+</select>
+
+<br><br>
+
+<select id="readyWords15x15">
+  <option value="" selected>Wyrazy z pola tekstowego</option>
+  <option value="names">Imiona</option>
+  <option value="months">Miesiące</option>
+  <option value="daysOfWeek">Dni tygodnia</option>
+  <option value="trees">Drzewa</option>
+  <option value="provinces">Województwa</option>
+  <option value="english">Angielskie</button><br>
+  <option value="greekAlphabet">Alfabet grecki</button><br>
+</select>
+
+<br><br>
+
+<button id="generateButton">Generuj</button>
+
 </aside>
 
 <aside>
@@ -86,521 +87,471 @@ Program wykreślanka do druku dostosowany jest do przeglądarki <font class="fir
 
 
 <span id="title" class="print"><h1>Wykreślanka</h1><br>Znajdź podane wyrazy:</span>
-<span id="slowa" class="print"></span>
+<span id="searchWords" class="print"></span>
 
 
 <div class="board print">
 <div id="boardCircle">
-		<h1>
-		<span id="circle0char0">A</span>
-		<span id="circle0char1">B</span>
-		<span id="circle0char2">B</span>
-		<span id="circle0char3">A</span>
-		<span id="circle0char4">B</span>
-		<span id="circle0char5">C</span>
-		<span id="circle0char6">A</span>
-		<span id="circle0char7">B</span>
-		<span id="circle0char8">B</span>
-		<span id="circle0char9">A</span>
-		<span id="circle0char10">B</span>
-		<span id="circle0char11">C</span>
-		<span id="circle0char12">C</span>
-		<span id="circle0char13">C</span>
-		<span id="circle0char14">C</span>
-		<span id="circle0char15">C</span>
-		<span id="circle0char16">A</span>
-		<span id="circle0char17">B</span>
-		<span id="circle0char18">B</span>
-		<span id="circle0char19">A</span>
-		<span id="circle0char20">B</span>
-		<span id="circle0char21">C</span>
-		<span id="circle0char22">B</span>
-		<span id="circle0char23">C</span>
-		</h1>
-		
-		<h2>
-		<span id="circle1char0">A</span>
-		<span id="circle1char1">B</span>
-		<span id="circle1char2">C</span>
-		<span id="circle1char3">D</span>
-		<span id="circle1char4">E</span>
-		<span id="circle1char5">F</span>
-		<span id="circle1char6">G</span>
-		<span id="circle1char7">H</span>
-		<span id="circle1char8">I</span>
-		<span id="circle1char9">J</span>
-		<span id="circle1char10">K</span>
-		<span id="circle1char11">L</span>
-		<span id="circle1char12">K</span>
-		<span id="circle1char13">L</span>
-		<span id="circle1char14">K</span>
-		<span id="circle1char15">L</span>
-		<span id="circle1char16">G</span>
-		<span id="circle1char17">H</span>
-		</h2>
-		
-		<h3>
-		<span id="circle2char0">A</span>
-		<span id="circle2char1">B</span>
-		<span id="circle2char2">C</span>
-		<span id="circle2char3">D</span>
-		<span id="circle2char4">E</span>
-		<span id="circle2char5">F</span>
-		<span id="circle2char6">G</span>
-		<span id="circle2char7">H</span>
-		<span id="circle2char8">I</span>
-		<span id="circle2char9">J</span>
-		<span id="circle2char10">K</span>
-		<span id="circle2char11">L</span>
-		</h3>
-		
-		<h4>
-		<span id="circle3char0">A</span>
-		<span id="circle3char1">B</span>
-		<span id="circle3char2">C</span>
-		<span id="circle3char3">D</span>
-		<span id="circle3char4">E</span>
-		<span id="circle3char5">F</span>
-		<span id="circle3char6">G</span>
-		<span id="circle3char7">H</span>
-		</h4>
+  <h1>
+    <span id="circle0char0">A</span>
+    <span id="circle0char1">B</span>
+    <span id="circle0char2">B</span>
+    <span id="circle0char3">A</span>
+    <span id="circle0char4">B</span>
+    <span id="circle0char5">C</span>
+    <span id="circle0char6">A</span>
+    <span id="circle0char7">B</span>
+    <span id="circle0char8">B</span>
+    <span id="circle0char9">A</span>
+    <span id="circle0char10">B</span>
+    <span id="circle0char11">C</span>
+    <span id="circle0char12">C</span>
+    <span id="circle0char13">C</span>
+    <span id="circle0char14">C</span>
+    <span id="circle0char15">C</span>
+    <span id="circle0char16">A</span>
+    <span id="circle0char17">B</span>
+    <span id="circle0char18">B</span>
+    <span id="circle0char19">A</span>
+    <span id="circle0char20">B</span>
+    <span id="circle0char21">C</span>
+    <span id="circle0char22">B</span>
+    <span id="circle0char23">C</span>
+    </h1>
+
+  <h2>
+    <span id="circle1char0">A</span>
+    <span id="circle1char1">B</span>
+    <span id="circle1char2">C</span>
+    <span id="circle1char3">D</span>
+    <span id="circle1char4">E</span>
+    <span id="circle1char5">F</span>
+    <span id="circle1char6">G</span>
+    <span id="circle1char7">H</span>
+    <span id="circle1char8">I</span>
+    <span id="circle1char9">J</span>
+    <span id="circle1char10">K</span>
+    <span id="circle1char11">L</span>
+    <span id="circle1char12">K</span>
+    <span id="circle1char13">L</span>
+    <span id="circle1char14">K</span>
+    <span id="circle1char15">L</span>
+    <span id="circle1char16">G</span>
+    <span id="circle1char17">H</span>
+  </h2>
+
+  <h3>
+    <span id="circle2char0">A</span>
+    <span id="circle2char1">B</span>
+    <span id="circle2char2">C</span>
+    <span id="circle2char3">D</span>
+    <span id="circle2char4">E</span>
+    <span id="circle2char5">F</span>
+    <span id="circle2char6">G</span>
+    <span id="circle2char7">H</span>
+    <span id="circle2char8">I</span>
+    <span id="circle2char9">J</span>
+    <span id="circle2char10">K</span>
+    <span id="circle2char11">L</span>
+  </h3>
+
+  <h4>
+    <span id="circle3char0">A</span>
+    <span id="circle3char1">B</span>
+    <span id="circle3char2">C</span>
+    <span id="circle3char3">D</span>
+    <span id="circle3char4">E</span>
+    <span id="circle3char5">F</span>
+    <span id="circle3char6">G</span>
+    <span id="circle3char7">H</span>
+  </h4>
 
 </div>
 
-
-
 <div id="board15x15">
-		
-	<div class="box-row">
-	
-		<div id="linia0litera0" class="box-cell"></div>
-		<div id="linia0litera1" class="box-cell"></div>
-		<div id="linia0litera2" class="box-cell"></div>
-		<div id="linia0litera3" class="box-cell"></div>
-		<div id="linia0litera4" class="box-cell"></div>
-		<div id="linia0litera5" class="box-cell"></div>
-		<div id="linia0litera6" class="box-cell"></div>
-		<div id="linia0litera7" class="box-cell"></div>
-		<div id="linia0litera8" class="box-cell"></div>
-		<div id="linia0litera9" class="box-cell"></div>
-		<div id="linia0litera10" class="box-cell"></div>
-		<div id="linia0litera11" class="box-cell"></div>
-		<div id="linia0litera12" class="box-cell" ></div>
-		<div id="linia0litera13" class="box-cell"></div>
-		<div id="linia0litera14" class="box-cell"></div>
-			
-	</div>
-			
-	<div class="box-row">
-	
-		<div id="linia1litera0" class="box-cell"></div>
-		<div id="linia1litera1" class="box-cell"></div>
-		<div id="linia1litera2" class="box-cell"></div>
-		<div id="linia1litera3" class="box-cell"></div>
-		<div id="linia1litera4" class="box-cell"></div>
-		<div id="linia1litera5" class="box-cell"></div>
-		<div id="linia1litera6" class="box-cell"></div>
-		<div id="linia1litera7" class="box-cell"></div>
-		<div id="linia1litera8" class="box-cell"></div>
-		<div id="linia1litera9" class="box-cell"></div>
-		<div id="linia1litera10" class="box-cell"></div>
-		<div id="linia1litera11" class="box-cell"></div>
-		<div id="linia1litera12" class="box-cell"></div>
-		<div id="linia1litera13" class="box-cell"></div>
-		<div id="linia1litera14" class="box-cell"></div>
-	
-	</div>
-			
-	<div class="box-row">
-	
-		<div id="linia2litera0" class="box-cell"></div>
-		<div id="linia2litera1" class="box-cell"></div>
-		<div id="linia2litera2" class="box-cell"></div>
-		<div id="linia2litera3" class="box-cell"></div>
-		<div id="linia2litera4" class="box-cell"></div>
-		<div id="linia2litera5" class="box-cell"></div>
-		<div id="linia2litera6" class="box-cell"></div>
-		<div id="linia2litera7" class="box-cell"></div>
-		<div id="linia2litera8" class="box-cell"></div>
-		<div id="linia2litera9" class="box-cell"></div>
-		<div id="linia2litera10" class="box-cell"></div>
-		<div id="linia2litera11" class="box-cell"></div>
-		<div id="linia2litera12" class="box-cell"></div>
-		<div id="linia2litera13" class="box-cell"></div>
-		<div id="linia2litera14" class="box-cell"></div>
-	
-	</div>
-			
-	<div class="box-row">
-	
-		<div id="linia3litera0" class="box-cell"></div>
-		<div id="linia3litera1" class="box-cell"></div>
-		<div id="linia3litera2" class="box-cell"></div>
-		<div id="linia3litera3" class="box-cell"></div>
-		<div id="linia3litera4" class="box-cell"></div>
-		<div id="linia3litera5" class="box-cell"></div>
-		<div id="linia3litera6" class="box-cell"></div>
-		<div id="linia3litera7" class="box-cell"></div>
-		<div id="linia3litera8" class="box-cell"></div>
-		<div id="linia3litera9" class="box-cell"></div>
-		<div id="linia3litera10" class="box-cell"></div>
-		<div id="linia3litera11" class="box-cell"></div>
-		<div id="linia3litera12" class="box-cell"></div>
-		<div id="linia3litera13" class="box-cell"></div>
-		<div id="linia3litera14" class="box-cell"></div>
-	
-	</div>
-			
-	<div class="box-row">
-	
-		<div id="linia4litera0" class="box-cell"></div>
-		<div id="linia4litera1" class="box-cell"></div>
-		<div id="linia4litera2" class="box-cell"></div>
-		<div id="linia4litera3" class="box-cell"></div>
-		<div id="linia4litera4" class="box-cell"></div>
-		<div id="linia4litera5" class="box-cell"></div>
-		<div id="linia4litera6" class="box-cell"></div>
-		<div id="linia4litera7" class="box-cell"></div>
-		<div id="linia4litera8" class="box-cell"></div>
-		<div id="linia4litera9" class="box-cell"></div>
-		<div id="linia4litera10" class="box-cell"></div>
-		<div id="linia4litera11" class="box-cell"></div>
-		<div id="linia4litera12" class="box-cell"></div>
-		<div id="linia4litera13" class="box-cell"></div>
-		<div id="linia4litera14" class="box-cell"></div>
-	
-	</div>
-			
-	<div class="box-row">
-	
-		<div id="linia5litera0" class="box-cell"></div>
-		<div id="linia5litera1" class="box-cell"></div>
-		<div id="linia5litera2" class="box-cell"></div>
-		<div id="linia5litera3" class="box-cell"></div>
-		<div id="linia5litera4" class="box-cell"></div>
-		<div id="linia5litera5" class="box-cell"></div>
-		<div id="linia5litera6" class="box-cell"></div>
-		<div id="linia5litera7" class="box-cell"></div>
-		<div id="linia5litera8" class="box-cell"></div>
-		<div id="linia5litera9" class="box-cell"></div>
-		<div id="linia5litera10" class="box-cell"></div>
-		<div id="linia5litera11" class="box-cell"></div>
-		<div id="linia5litera12" class="box-cell"></div>
-		<div id="linia5litera13" class="box-cell"></div>
-		<div id="linia5litera14" class="box-cell"></div>
-			
-	</div>
-			
-	<div class="box-row">
-			
-		<div id="linia6litera0" class="box-cell"></div>
-		<div id="linia6litera1" class="box-cell"></div>
-		<div id="linia6litera2" class="box-cell"></div>
-		<div id="linia6litera3" class="box-cell"></div>
-		<div id="linia6litera4" class="box-cell"></div>
-		<div id="linia6litera5" class="box-cell"></div>
-		<div id="linia6litera6" class="box-cell"></div>
-		<div id="linia6litera7" class="box-cell"></div>
-		<div id="linia6litera8" class="box-cell"></div>
-		<div id="linia6litera9" class="box-cell"></div>
-		<div id="linia6litera10" class="box-cell"></div>
-		<div id="linia6litera11" class="box-cell"></div>
-		<div id="linia6litera12" class="box-cell"></div>
-		<div id="linia6litera13" class="box-cell"></div>
-		<div id="linia6litera14" class="box-cell"></div>
-	
-	</div>
-			
-	<div class="box-row">
-			
-		<div id="linia7litera0" class="box-cell"></div>
-		<div id="linia7litera1" class="box-cell"></div>
-		<div id="linia7litera2" class="box-cell"></div>
-		<div id="linia7litera3" class="box-cell"></div>
-		<div id="linia7litera4" class="box-cell"></div>
-		<div id="linia7litera5" class="box-cell"></div>
-		<div id="linia7litera6" class="box-cell"></div>
-		<div id="linia7litera7" class="box-cell"></div>
-		<div id="linia7litera8" class="box-cell"></div>
-		<div id="linia7litera9" class="box-cell"></div>
-		<div id="linia7litera10" class="box-cell"></div>
-		<div id="linia7litera11" class="box-cell"></div>
-		<div id="linia7litera12" class="box-cell"></div>
-		<div id="linia7litera13" class="box-cell"></div>
-		<div id="linia7litera14" class="box-cell"></div>
-	
-	</div>
-			
-	<div class="box-row">
-			
-		<div id="linia8litera0" class="box-cell"></div>
-		<div id="linia8litera1" class="box-cell"></div>
-		<div id="linia8litera2" class="box-cell"></div>
-		<div id="linia8litera3" class="box-cell"></div>
-		<div id="linia8litera4" class="box-cell"></div>
-		<div id="linia8litera5" class="box-cell"></div>
-		<div id="linia8litera6" class="box-cell"></div>
-		<div id="linia8litera7" class="box-cell"></div>
-		<div id="linia8litera8" class="box-cell"></div>
-		<div id="linia8litera9" class="box-cell"></div>
-		<div id="linia8litera10" class="box-cell"></div>
-		<div id="linia8litera11" class="box-cell"></div>
-		<div id="linia8litera12" class="box-cell"></div>
-		<div id="linia8litera13" class="box-cell"></div>
-		<div id="linia8litera14" class="box-cell"></div>
-	
-	</div>
-			
-	<div class="box-row">
-			
-		<div id="linia9litera0" class="box-cell"></div>
-		<div id="linia9litera1" class="box-cell"></div>
-		<div id="linia9litera2" class="box-cell"></div>
-		<div id="linia9litera3" class="box-cell"></div>
-		<div id="linia9litera4" class="box-cell"></div>
-		<div id="linia9litera5" class="box-cell"></div>
-		<div id="linia9litera6" class="box-cell"></div>
-		<div id="linia9litera7" class="box-cell"></div>
-		<div id="linia9litera8" class="box-cell"></div>
-		<div id="linia9litera9" class="box-cell"></div>
-		<div id="linia9litera10" class="box-cell"></div>
-		<div id="linia9litera11" class="box-cell"></div>
-		<div id="linia9litera12" class="box-cell"></div>
-		<div id="linia9litera13" class="box-cell"></div>
-		<div id="linia9litera14" class="box-cell"></div>
-	
-	</div>
-			
-	<div class="box-row">
-			
-		<div id="linia10litera0" class="box-cell"></div>
-		<div id="linia10litera1" class="box-cell"></div>
-		<div id="linia10litera2" class="box-cell"></div>
-		<div id="linia10litera3" class="box-cell"></div>
-		<div id="linia10litera4" class="box-cell"></div>
-		<div id="linia10litera5" class="box-cell"></div>
-		<div id="linia10litera6" class="box-cell"></div>
-		<div id="linia10litera7" class="box-cell"></div>
-		<div id="linia10litera8" class="box-cell"></div>
-		<div id="linia10litera9" class="box-cell"></div>
-		<div id="linia10litera10" class="box-cell"></div>
-		<div id="linia10litera11" class="box-cell"></div>
-		<div id="linia10litera12" class="box-cell"></div>
-		<div id="linia10litera13" class="box-cell"></div>
-		<div id="linia10litera14" class="box-cell"></div>
-	
-	</div>
-			
-	<div class="box-row">
-	
-		<div id="linia11litera0" class="box-cell"></div>
-		<div id="linia11litera1" class="box-cell"></div>
-		<div id="linia11litera2" class="box-cell"></div>
-		<div id="linia11litera3" class="box-cell"></div>
-		<div id="linia11litera4" class="box-cell"></div>
-		<div id="linia11litera5" class="box-cell"></div>
-		<div id="linia11litera6" class="box-cell"></div>
-		<div id="linia11litera7" class="box-cell"></div>
-		<div id="linia11litera8" class="box-cell"></div>
-		<div id="linia11litera9" class="box-cell"></div>
-		<div id="linia11litera10" class="box-cell"></div>
-		<div id="linia11litera11" class="box-cell"></div>
-		<div id="linia11litera12" class="box-cell"></div>
-		<div id="linia11litera13" class="box-cell"></div>
-		<div id="linia11litera14" class="box-cell"></div>
-	
-	</div>
-			
-	<div class="box-row">
-	
-		<div id="linia12litera0" class="box-cell"></div>
-		<div id="linia12litera1" class="box-cell"></div>
-		<div id="linia12litera2" class="box-cell"></div>
-		<div id="linia12litera3" class="box-cell"></div>
-		<div id="linia12litera4" class="box-cell"></div>
-		<div id="linia12litera5" class="box-cell"></div>
-		<div id="linia12litera6" class="box-cell"></div>
-		<div id="linia12litera7" class="box-cell"></div>
-		<div id="linia12litera8" class="box-cell"></div>
-		<div id="linia12litera9" class="box-cell"></div>
-		<div id="linia12litera10" class="box-cell"></div>
-		<div id="linia12litera11" class="box-cell"></div>
-		<div id="linia12litera12" class="box-cell"></div>
-		<div id="linia12litera13" class="box-cell"></div>
-		<div id="linia12litera14" class="box-cell"></div>
-	
-	</div>
-			
-	<div class="box-row">
-	
-		<div id="linia13litera0" class="box-cell"></div>
-		<div id="linia13litera1" class="box-cell"></div>
-		<div id="linia13litera2" class="box-cell"></div>
-		<div id="linia13litera3" class="box-cell"></div>
-		<div id="linia13litera4" class="box-cell"></div>
-		<div id="linia13litera5" class="box-cell"></div>
-		<div id="linia13litera6" class="box-cell"></div>
-		<div id="linia13litera7" class="box-cell"></div>
-		<div id="linia13litera8" class="box-cell"></div>
-		<div id="linia13litera9" class="box-cell"></div>
-		<div id="linia13litera10" class="box-cell"></div>
-		<div id="linia13litera11" class="box-cell"></div>
-		<div id="linia13litera12" class="box-cell"></div>
-		<div id="linia13litera13" class="box-cell"></div>
-		<div id="linia13litera14" class="box-cell"></div>
-	
-	</div>
-			
-	<div class="box-row">
-	
-		<div id="linia14litera0" class="box-cell"></div>
-		<div id="linia14litera1" class="box-cell"></div>
-		<div id="linia14litera2" class="box-cell"></div>
-		<div id="linia14litera3" class="box-cell"></div>
-		<div id="linia14litera4" class="box-cell"></div>
-		<div id="linia14litera5" class="box-cell"></div>
-		<div id="linia14litera6" class="box-cell"></div>
-		<div id="linia14litera7" class="box-cell"></div>
-		<div id="linia14litera8" class="box-cell"></div>
-		<div id="linia14litera9" class="box-cell"></div>
-		<div id="linia14litera10" class="box-cell"></div>
-		<div id="linia14litera11" class="box-cell"></div>
-		<div id="linia14litera12" class="box-cell"></div>
-		<div id="linia14litera13" class="box-cell"></div>
-		<div id="linia14litera14" class="box-cell"></div>
-	
-	</div><!--box-row-->
-			
+
+  <div class="box-row">
+    <div id="linia0litera0" class="box-cell"></div>
+    <div id="linia0litera1" class="box-cell"></div>
+    <div id="linia0litera2" class="box-cell"></div>
+    <div id="linia0litera3" class="box-cell"></div>
+    <div id="linia0litera4" class="box-cell"></div>
+    <div id="linia0litera5" class="box-cell"></div>
+    <div id="linia0litera6" class="box-cell"></div>
+    <div id="linia0litera7" class="box-cell"></div>
+    <div id="linia0litera8" class="box-cell"></div>
+    <div id="linia0litera9" class="box-cell"></div>
+    <div id="linia0litera10" class="box-cell"></div>
+    <div id="linia0litera11" class="box-cell"></div>
+    <div id="linia0litera12" class="box-cell" ></div>
+    <div id="linia0litera13" class="box-cell"></div>
+    <div id="linia0litera14" class="box-cell"></div>
+  </div>
+
+  <div class="box-row">
+    <div id="linia1litera0" class="box-cell"></div>
+    <div id="linia1litera1" class="box-cell"></div>
+    <div id="linia1litera2" class="box-cell"></div>
+    <div id="linia1litera3" class="box-cell"></div>
+    <div id="linia1litera4" class="box-cell"></div>
+    <div id="linia1litera5" class="box-cell"></div>
+    <div id="linia1litera6" class="box-cell"></div>
+    <div id="linia1litera7" class="box-cell"></div>
+    <div id="linia1litera8" class="box-cell"></div>
+    <div id="linia1litera9" class="box-cell"></div>
+    <div id="linia1litera10" class="box-cell"></div>
+    <div id="linia1litera11" class="box-cell"></div>
+    <div id="linia1litera12" class="box-cell"></div>
+    <div id="linia1litera13" class="box-cell"></div>
+    <div id="linia1litera14" class="box-cell"></div>
+  </div>
+
+  <div class="box-row">
+    <div id="linia2litera0" class="box-cell"></div>
+    <div id="linia2litera1" class="box-cell"></div>
+    <div id="linia2litera2" class="box-cell"></div>
+    <div id="linia2litera3" class="box-cell"></div>
+    <div id="linia2litera4" class="box-cell"></div>
+    <div id="linia2litera5" class="box-cell"></div>
+    <div id="linia2litera6" class="box-cell"></div>
+    <div id="linia2litera7" class="box-cell"></div>
+    <div id="linia2litera8" class="box-cell"></div>
+    <div id="linia2litera9" class="box-cell"></div>
+    <div id="linia2litera10" class="box-cell"></div>
+    <div id="linia2litera11" class="box-cell"></div>
+    <div id="linia2litera12" class="box-cell"></div>
+    <div id="linia2litera13" class="box-cell"></div>
+    <div id="linia2litera14" class="box-cell"></div>
+  </div>
+
+  <div class="box-row">
+    <div id="linia3litera0" class="box-cell"></div>
+    <div id="linia3litera1" class="box-cell"></div>
+    <div id="linia3litera2" class="box-cell"></div>
+    <div id="linia3litera3" class="box-cell"></div>
+    <div id="linia3litera4" class="box-cell"></div>
+    <div id="linia3litera5" class="box-cell"></div>
+    <div id="linia3litera6" class="box-cell"></div>
+    <div id="linia3litera7" class="box-cell"></div>
+    <div id="linia3litera8" class="box-cell"></div>
+    <div id="linia3litera9" class="box-cell"></div>
+    <div id="linia3litera10" class="box-cell"></div>
+    <div id="linia3litera11" class="box-cell"></div>
+    <div id="linia3litera12" class="box-cell"></div>
+    <div id="linia3litera13" class="box-cell"></div>
+    <div id="linia3litera14" class="box-cell"></div>
+  </div>
+
+  <div class="box-row">
+    <div id="linia4litera0" class="box-cell"></div>
+    <div id="linia4litera1" class="box-cell"></div>
+    <div id="linia4litera2" class="box-cell"></div>
+    <div id="linia4litera3" class="box-cell"></div>
+    <div id="linia4litera4" class="box-cell"></div>
+    <div id="linia4litera5" class="box-cell"></div>
+    <div id="linia4litera6" class="box-cell"></div>
+    <div id="linia4litera7" class="box-cell"></div>
+    <div id="linia4litera8" class="box-cell"></div>
+    <div id="linia4litera9" class="box-cell"></div>
+    <div id="linia4litera10" class="box-cell"></div>
+    <div id="linia4litera11" class="box-cell"></div>
+    <div id="linia4litera12" class="box-cell"></div>
+    <div id="linia4litera13" class="box-cell"></div>
+    <div id="linia4litera14" class="box-cell"></div>
+  </div>
+
+  <div class="box-row">
+    <div id="linia5litera0" class="box-cell"></div>
+    <div id="linia5litera1" class="box-cell"></div>
+    <div id="linia5litera2" class="box-cell"></div>
+    <div id="linia5litera3" class="box-cell"></div>
+    <div id="linia5litera4" class="box-cell"></div>
+    <div id="linia5litera5" class="box-cell"></div>
+    <div id="linia5litera6" class="box-cell"></div>
+    <div id="linia5litera7" class="box-cell"></div>
+    <div id="linia5litera8" class="box-cell"></div>
+    <div id="linia5litera9" class="box-cell"></div>
+    <div id="linia5litera10" class="box-cell"></div>
+    <div id="linia5litera11" class="box-cell"></div>
+    <div id="linia5litera12" class="box-cell"></div>
+    <div id="linia5litera13" class="box-cell"></div>
+    <div id="linia5litera14" class="box-cell"></div>
+  </div>
+
+  <div class="box-row">
+    <div id="linia6litera0" class="box-cell"></div>
+    <div id="linia6litera1" class="box-cell"></div>
+    <div id="linia6litera2" class="box-cell"></div>
+    <div id="linia6litera3" class="box-cell"></div>
+    <div id="linia6litera4" class="box-cell"></div>
+    <div id="linia6litera5" class="box-cell"></div>
+    <div id="linia6litera6" class="box-cell"></div>
+    <div id="linia6litera7" class="box-cell"></div>
+    <div id="linia6litera8" class="box-cell"></div>
+    <div id="linia6litera9" class="box-cell"></div>
+    <div id="linia6litera10" class="box-cell"></div>
+    <div id="linia6litera11" class="box-cell"></div>
+    <div id="linia6litera12" class="box-cell"></div>
+    <div id="linia6litera13" class="box-cell"></div>
+    <div id="linia6litera14" class="box-cell"></div>
+  </div>
+  
+  <div class="box-row">
+    <div id="linia7litera0" class="box-cell"></div>
+    <div id="linia7litera1" class="box-cell"></div>
+    <div id="linia7litera2" class="box-cell"></div>
+    <div id="linia7litera3" class="box-cell"></div>
+    <div id="linia7litera4" class="box-cell"></div>
+    <div id="linia7litera5" class="box-cell"></div>
+    <div id="linia7litera6" class="box-cell"></div>
+    <div id="linia7litera7" class="box-cell"></div>
+    <div id="linia7litera8" class="box-cell"></div>
+    <div id="linia7litera9" class="box-cell"></div>
+    <div id="linia7litera10" class="box-cell"></div>
+    <div id="linia7litera11" class="box-cell"></div>
+    <div id="linia7litera12" class="box-cell"></div>
+    <div id="linia7litera13" class="box-cell"></div>
+    <div id="linia7litera14" class="box-cell"></div>
+  </div>
+
+  <div class="box-row">
+    <div id="linia8litera0" class="box-cell"></div>
+    <div id="linia8litera1" class="box-cell"></div>
+    <div id="linia8litera2" class="box-cell"></div>
+    <div id="linia8litera3" class="box-cell"></div>
+    <div id="linia8litera4" class="box-cell"></div>
+    <div id="linia8litera5" class="box-cell"></div>
+    <div id="linia8litera6" class="box-cell"></div>
+    <div id="linia8litera7" class="box-cell"></div>
+    <div id="linia8litera8" class="box-cell"></div>
+    <div id="linia8litera9" class="box-cell"></div>
+    <div id="linia8litera10" class="box-cell"></div>
+    <div id="linia8litera11" class="box-cell"></div>
+    <div id="linia8litera12" class="box-cell"></div>
+    <div id="linia8litera13" class="box-cell"></div>
+    <div id="linia8litera14" class="box-cell"></div>
+  </div>
+
+  <div class="box-row">
+    <div id="linia9litera0" class="box-cell"></div>
+    <div id="linia9litera1" class="box-cell"></div>
+    <div id="linia9litera2" class="box-cell"></div>
+    <div id="linia9litera3" class="box-cell"></div>
+    <div id="linia9litera4" class="box-cell"></div>
+    <div id="linia9litera5" class="box-cell"></div>
+    <div id="linia9litera6" class="box-cell"></div>
+    <div id="linia9litera7" class="box-cell"></div>
+    <div id="linia9litera8" class="box-cell"></div>
+    <div id="linia9litera9" class="box-cell"></div>
+    <div id="linia9litera10" class="box-cell"></div>
+    <div id="linia9litera11" class="box-cell"></div>
+    <div id="linia9litera12" class="box-cell"></div>
+    <div id="linia9litera13" class="box-cell"></div>
+    <div id="linia9litera14" class="box-cell"></div>
+  </div>
+
+  <div class="box-row">
+    <div id="linia10litera0" class="box-cell"></div>
+    <div id="linia10litera1" class="box-cell"></div>
+    <div id="linia10litera2" class="box-cell"></div>
+    <div id="linia10litera3" class="box-cell"></div>
+    <div id="linia10litera4" class="box-cell"></div>
+    <div id="linia10litera5" class="box-cell"></div>
+    <div id="linia10litera6" class="box-cell"></div>
+    <div id="linia10litera7" class="box-cell"></div>
+    <div id="linia10litera8" class="box-cell"></div>
+    <div id="linia10litera9" class="box-cell"></div>
+    <div id="linia10litera10" class="box-cell"></div>
+    <div id="linia10litera11" class="box-cell"></div>
+    <div id="linia10litera12" class="box-cell"></div>
+    <div id="linia10litera13" class="box-cell"></div>
+    <div id="linia10litera14" class="box-cell"></div>
+  </div>
+
+  <div class="box-row">
+    <div id="linia11litera0" class="box-cell"></div>
+    <div id="linia11litera1" class="box-cell"></div>
+    <div id="linia11litera2" class="box-cell"></div>
+    <div id="linia11litera3" class="box-cell"></div>
+    <div id="linia11litera4" class="box-cell"></div>
+    <div id="linia11litera5" class="box-cell"></div>
+    <div id="linia11litera6" class="box-cell"></div>
+    <div id="linia11litera7" class="box-cell"></div>
+    <div id="linia11litera8" class="box-cell"></div>
+    <div id="linia11litera9" class="box-cell"></div>
+    <div id="linia11litera10" class="box-cell"></div>
+    <div id="linia11litera11" class="box-cell"></div>
+    <div id="linia11litera12" class="box-cell"></div>
+    <div id="linia11litera13" class="box-cell"></div>
+    <div id="linia11litera14" class="box-cell"></div>
+  </div>
+
+  <div class="box-row">
+    <div id="linia12litera0" class="box-cell"></div>
+    <div id="linia12litera1" class="box-cell"></div>
+    <div id="linia12litera2" class="box-cell"></div>
+    <div id="linia12litera3" class="box-cell"></div>
+    <div id="linia12litera4" class="box-cell"></div>
+    <div id="linia12litera5" class="box-cell"></div>
+    <div id="linia12litera6" class="box-cell"></div>
+    <div id="linia12litera7" class="box-cell"></div>
+    <div id="linia12litera8" class="box-cell"></div>
+    <div id="linia12litera9" class="box-cell"></div>
+    <div id="linia12litera10" class="box-cell"></div>
+    <div id="linia12litera11" class="box-cell"></div>
+    <div id="linia12litera12" class="box-cell"></div>
+    <div id="linia12litera13" class="box-cell"></div>
+    <div id="linia12litera14" class="box-cell"></div>
+  </div>
+
+  <div class="box-row">
+    <div id="linia13litera0" class="box-cell"></div>
+    <div id="linia13litera1" class="box-cell"></div>
+    <div id="linia13litera2" class="box-cell"></div>
+    <div id="linia13litera3" class="box-cell"></div>
+    <div id="linia13litera4" class="box-cell"></div>
+    <div id="linia13litera5" class="box-cell"></div>
+    <div id="linia13litera6" class="box-cell"></div>
+    <div id="linia13litera7" class="box-cell"></div>
+    <div id="linia13litera8" class="box-cell"></div>
+    <div id="linia13litera9" class="box-cell"></div>
+    <div id="linia13litera10" class="box-cell"></div>
+    <div id="linia13litera11" class="box-cell"></div>
+    <div id="linia13litera12" class="box-cell"></div>
+    <div id="linia13litera13" class="box-cell"></div>
+    <div id="linia13litera14" class="box-cell"></div>
+  </div>
+
+  <div class="box-row">
+    <div id="linia14litera0" class="box-cell"></div>
+    <div id="linia14litera1" class="box-cell"></div>
+    <div id="linia14litera2" class="box-cell"></div>
+    <div id="linia14litera3" class="box-cell"></div>
+    <div id="linia14litera4" class="box-cell"></div>
+    <div id="linia14litera5" class="box-cell"></div>
+    <div id="linia14litera6" class="box-cell"></div>
+    <div id="linia14litera7" class="box-cell"></div>
+    <div id="linia14litera8" class="box-cell"></div>
+    <div id="linia14litera9" class="box-cell"></div>
+    <div id="linia14litera10" class="box-cell"></div>
+    <div id="linia14litera11" class="box-cell"></div>
+    <div id="linia14litera12" class="box-cell"></div>
+    <div id="linia14litera13" class="box-cell"></div>
+    <div id="linia14litera14" class="box-cell"></div>
+  </div><!--box-row-->
+
 </div><!--board15x15-->
 
 <div id="board9x9">
-		
-	<div class="box-row">
-	
-		<div id="linia0litera0" class="box-cell"></div>
-		<div id="linia0litera1" class="box-cell"></div>
-		<div id="linia0litera2" class="box-cell"></div>
-		<div id="linia0litera3" class="box-cell"></div>
-		<div id="linia0litera4" class="box-cell"></div>
-		<div id="linia0litera5" class="box-cell"></div>
-		<div id="linia0litera6" class="box-cell"></div>
-		<div id="linia0litera7" class="box-cell"></div>
-		<div id="linia0litera8" class="box-cell"></div>
-			
-	</div>
-			
-	<div class="box-row">
-	
-		<div id="linia1litera0" class="box-cell"></div>
-		<div id="linia1litera1" class="box-cell"></div>
-		<div id="linia1litera2" class="box-cell"></div>
-		<div id="linia1litera3" class="box-cell"></div>
-		<div id="linia1litera4" class="box-cell"></div>
-		<div id="linia1litera5" class="box-cell"></div>
-		<div id="linia1litera6" class="box-cell"></div>
-		<div id="linia1litera7" class="box-cell"></div>
-		<div id="linia1litera8" class="box-cell"></div>
-	
-	</div>
-			
-	<div class="box-row">
-	
-		<div id="linia2litera0" class="box-cell"></div>
-		<div id="linia2litera1" class="box-cell"></div>
-		<div id="linia2litera2" class="box-cell"></div>
-		<div id="linia2litera3" class="box-cell"></div>
-		<div id="linia2litera4" class="box-cell"></div>
-		<div id="linia2litera5" class="box-cell"></div>
-		<div id="linia2litera6" class="box-cell"></div>
-		<div id="linia2litera7" class="box-cell"></div>
-		<div id="linia2litera8" class="box-cell"></div>
-	
-	</div>
-			
-	<div class="box-row">
-	
-		<div id="linia3litera0" class="box-cell"></div>
-		<div id="linia3litera1" class="box-cell"></div>
-		<div id="linia3litera2" class="box-cell"></div>
-		<div id="linia3litera3" class="box-cell"></div>
-		<div id="linia3litera4" class="box-cell"></div>
-		<div id="linia3litera5" class="box-cell"></div>
-		<div id="linia3litera6" class="box-cell"></div>
-		<div id="linia3litera7" class="box-cell"></div>
-		<div id="linia3litera8" class="box-cell"></div>
-	
-	</div>
-			
-	<div class="box-row">
-	
-		<div id="linia4litera0" class="box-cell"></div>
-		<div id="linia4litera1" class="box-cell"></div>
-		<div id="linia4litera2" class="box-cell"></div>
-		<div id="linia4litera3" class="box-cell"></div>
-		<div id="linia4litera4" class="box-cell"></div>
-		<div id="linia4litera5" class="box-cell"></div>
-		<div id="linia4litera6" class="box-cell"></div>
-		<div id="linia4litera7" class="box-cell"></div>
-		<div id="linia4litera8" class="box-cell"></div>
-	
-	</div>
-			
-	<div class="box-row">
-	
-		<div id="linia5litera0" class="box-cell"></div>
-		<div id="linia5litera1" class="box-cell"></div>
-		<div id="linia5litera2" class="box-cell"></div>
-		<div id="linia5litera3" class="box-cell"></div>
-		<div id="linia5litera4" class="box-cell"></div>
-		<div id="linia5litera5" class="box-cell"></div>
-		<div id="linia5litera6" class="box-cell"></div>
-		<div id="linia5litera7" class="box-cell"></div>
-		<div id="linia5litera8" class="box-cell"></div>
-			
-	</div>
-			
-	<div class="box-row">
-			
-		<div id="linia6litera0" class="box-cell"></div>
-		<div id="linia6litera1" class="box-cell"></div>
-		<div id="linia6litera2" class="box-cell"></div>
-		<div id="linia6litera3" class="box-cell"></div>
-		<div id="linia6litera4" class="box-cell"></div>
-		<div id="linia6litera5" class="box-cell"></div>
-		<div id="linia6litera6" class="box-cell"></div>
-		<div id="linia6litera7" class="box-cell"></div>
-		<div id="linia6litera8" class="box-cell"></div>
-	
-	</div>
-			
-	<div class="box-row">
-			
-		<div id="linia7litera0" class="box-cell"></div>
-		<div id="linia7litera1" class="box-cell"></div>
-		<div id="linia7litera2" class="box-cell"></div>
-		<div id="linia7litera3" class="box-cell"></div>
-		<div id="linia7litera4" class="box-cell"></div>
-		<div id="linia7litera5" class="box-cell"></div>
-		<div id="linia7litera6" class="box-cell"></div>
-		<div id="linia7litera7" class="box-cell"></div>
-		<div id="linia7litera8" class="box-cell"></div>
-	
-	</div>
-			
-	<div class="box-row">
-			
-		<div id="linia8litera0" class="box-cell"></div>
-		<div id="linia8litera1" class="box-cell"></div>
-		<div id="linia8litera2" class="box-cell"></div>
-		<div id="linia8litera3" class="box-cell"></div>
-		<div id="linia8litera4" class="box-cell"></div>
-		<div id="linia8litera5" class="box-cell"></div>
-		<div id="linia8litera6" class="box-cell"></div>
-		<div id="linia8litera7" class="box-cell"></div>
-		<div id="linia8litera8" class="box-cell"></div>
-	
-	</div>
-						
+
+  <div class="box-row">
+    <div id="linia0litera0" class="box-cell"></div>
+    <div id="linia0litera1" class="box-cell"></div>
+    <div id="linia0litera2" class="box-cell"></div>
+    <div id="linia0litera3" class="box-cell"></div>
+    <div id="linia0litera4" class="box-cell"></div>
+    <div id="linia0litera5" class="box-cell"></div>
+    <div id="linia0litera6" class="box-cell"></div>
+    <div id="linia0litera7" class="box-cell"></div>
+    <div id="linia0litera8" class="box-cell"></div>
+  </div>
+
+  <div class="box-row">
+    <div id="linia1litera0" class="box-cell"></div>
+    <div id="linia1litera1" class="box-cell"></div>
+    <div id="linia1litera2" class="box-cell"></div>
+    <div id="linia1litera3" class="box-cell"></div>
+    <div id="linia1litera4" class="box-cell"></div>
+    <div id="linia1litera5" class="box-cell"></div>
+    <div id="linia1litera6" class="box-cell"></div>
+    <div id="linia1litera7" class="box-cell"></div>
+    <div id="linia1litera8" class="box-cell"></div>
+  </div>
+
+  <div class="box-row">
+    <div id="linia2litera0" class="box-cell"></div>
+    <div id="linia2litera1" class="box-cell"></div>
+    <div id="linia2litera2" class="box-cell"></div>
+    <div id="linia2litera3" class="box-cell"></div>
+    <div id="linia2litera4" class="box-cell"></div>
+    <div id="linia2litera5" class="box-cell"></div>
+    <div id="linia2litera6" class="box-cell"></div>
+    <div id="linia2litera7" class="box-cell"></div>
+    <div id="linia2litera8" class="box-cell"></div>
+  </div>
+
+  <div class="box-row">
+    <div id="linia3litera0" class="box-cell"></div>
+    <div id="linia3litera1" class="box-cell"></div>
+    <div id="linia3litera2" class="box-cell"></div>
+    <div id="linia3litera3" class="box-cell"></div>
+    <div id="linia3litera4" class="box-cell"></div>
+    <div id="linia3litera5" class="box-cell"></div>
+    <div id="linia3litera6" class="box-cell"></div>
+    <div id="linia3litera7" class="box-cell"></div>
+    <div id="linia3litera8" class="box-cell"></div>
+  </div>
+
+  <div class="box-row">
+    <div id="linia4litera0" class="box-cell"></div>
+    <div id="linia4litera1" class="box-cell"></div>
+    <div id="linia4litera2" class="box-cell"></div>
+    <div id="linia4litera3" class="box-cell"></div>
+    <div id="linia4litera4" class="box-cell"></div>
+    <div id="linia4litera5" class="box-cell"></div>
+    <div id="linia4litera6" class="box-cell"></div>
+    <div id="linia4litera7" class="box-cell"></div>
+    <div id="linia4litera8" class="box-cell"></div>
+  </div>
+
+  <div class="box-row">
+    <div id="linia5litera0" class="box-cell"></div>
+    <div id="linia5litera1" class="box-cell"></div>
+    <div id="linia5litera2" class="box-cell"></div>
+    <div id="linia5litera3" class="box-cell"></div>
+    <div id="linia5litera4" class="box-cell"></div>
+    <div id="linia5litera5" class="box-cell"></div>
+    <div id="linia5litera6" class="box-cell"></div>
+    <div id="linia5litera7" class="box-cell"></div>
+    <div id="linia5litera8" class="box-cell"></div>
+  </div>
+
+  <div class="box-row">
+    <div id="linia6litera0" class="box-cell"></div>
+    <div id="linia6litera1" class="box-cell"></div>
+    <div id="linia6litera2" class="box-cell"></div>
+    <div id="linia6litera3" class="box-cell"></div>
+    <div id="linia6litera4" class="box-cell"></div>
+    <div id="linia6litera5" class="box-cell"></div>
+    <div id="linia6litera6" class="box-cell"></div>
+    <div id="linia6litera7" class="box-cell"></div>
+    <div id="linia6litera8" class="box-cell"></div>
+  </div>
+
+  <div class="box-row">
+    <div id="linia7litera0" class="box-cell"></div>
+    <div id="linia7litera1" class="box-cell"></div>
+    <div id="linia7litera2" class="box-cell"></div>
+    <div id="linia7litera3" class="box-cell"></div>
+    <div id="linia7litera4" class="box-cell"></div>
+    <div id="linia7litera5" class="box-cell"></div>
+    <div id="linia7litera6" class="box-cell"></div>
+    <div id="linia7litera7" class="box-cell"></div>
+    <div id="linia7litera8" class="box-cell"></div>
+  </div>
+
+  <div class="box-row">
+    <div id="linia8litera0" class="box-cell"></div>
+    <div id="linia8litera1" class="box-cell"></div>
+    <div id="linia8litera2" class="box-cell"></div>
+    <div id="linia8litera3" class="box-cell"></div>
+    <div id="linia8litera4" class="box-cell"></div>
+    <div id="linia8litera5" class="box-cell"></div>
+    <div id="linia8litera6" class="box-cell"></div>
+    <div id="linia8litera7" class="box-cell"></div>
+    <div id="linia8litera8" class="box-cell"></div>
+  </div>
+
 </div><!--board9x9-->
 
 </div>

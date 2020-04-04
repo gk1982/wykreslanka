@@ -150,11 +150,6 @@ footer a:active {
   color: #727272;
 }
 
-br {
-  margin: 0px;
-  padding: 0px;
-}
-
 button {
   padding: 1px 32px;
   width: 198px;
@@ -166,9 +161,9 @@ button {
 }
 
 button:focus {
-    border-color: #80bdff;
-    outline: 0;
-    box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
 }
 
 select {
@@ -213,29 +208,27 @@ textarea:focus {
 }
 
 #boardCircle {
-	 width: 540px; 
-	height: 540px;
-	background-color: white;
-	color: black;
-	margin: 0 auto;
-	display:table; 
-	border: 2px solid black;
-	padding: 0px;
-	margin-left: 32px;
-	border-radius: 50%;
-	transform: rotate(0deg);
-	-webkit-user-select: none; /* Safari 3.1+ */
-	-moz-user-select: none; /* Firefox 2+ */
-	-ms-user-select: none; /* IE 10+ */
-	user-select: none; /* Standard syntax */ 
- 	
+  width: 540px; 
+  height: 540px;
+  background-color: white;
+  color: black;
+  margin: 0 auto;
+  display:table; 
+  border: 2px solid black;
+  padding: 0px;
+  margin-left: 32px;
+  border-radius: 50%;
+  transform: rotate(0deg);
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Standard syntax */ 
 }
 
 h1 span {
   height: 255px;
   position: fixed;
   left: 265px;
-  
   transform-origin: bottom center;
   visibility: visible;
   display: block;
@@ -521,56 +514,56 @@ h4 span {
 }
 
 #board15x15 {
-	width: 570px; 
-	height: 570px;
-	background-color: white;
-	color: black;
-    margin: 8px 16px 16px 8px; 
-    display:table; 
-	border: 2px solid black;	
-	padding: 0px;
-	margin-left: 13px;
-	font-size: 16px;
-	-webkit-user-select: none; /* Safari 3.1+ */
-	-moz-user-select: none; /* Firefox 2+ */
-	-ms-user-select: none; /* IE 10+ */
-	user-select: none; /* Standard syntax */
+  width: 570px;
+  height: 570px;
+  background-color: white;
+  color: black;
+  margin: 8px 16px 16px 8px;
+  display:table;
+  border: 2px solid black;
+  padding: 0px;
+  margin-left: 13px;
+  font-size: 16px;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Standard syntax */
 }
 
 #board9x9 {
-	width: 513px; 
-	height: 513px;
-	background-color: white;
-	color: black;
-    margin: 10px 20px 20px 10px; 
-    display:table; 
-	border: 2px solid black;	
-	padding: 0px;
-	margin-left: 42px;
-	font-size: 32px;
-	-webkit-user-select: none; /* Safari 3.1+ */
-	-moz-user-select: none; /* Firefox 2+ */
-	-ms-user-select: none; /* IE 10+ */
-	user-select: none; /* Standard syntax */ 
+  width: 513px;
+  height: 513px;
+  background-color: white;
+  color: black;
+  margin: 10px 20px 20px 10px; 
+  display:table;
+  border: 2px solid black;
+  padding: 0px;
+  margin-left: 42px;
+  font-size: 32px;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Standard syntax */ 
 }
 
 .box-row {
-	margin: 0 auto;
-	border: 0px solid black;
-    padding: 0px;
-	display: table-row;
+  margin: 0 auto;
+  border: 0px solid black;
+  padding: 0px;
+  display: table-row;
 }
 
 .box-cell {
-	width: 36px;
-	height: 36px;
-    border: 1px solid black;
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
-    display: table-cell;
-	text-align: center;
-	background-color: white;	
-	vertical-align: middle;
-	line-height: 1.6; 
-	justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid black;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  display: table-cell;
+  text-align: center;
+  background-color: white;
+  vertical-align: middle;
+  line-height: 1.6; 
+  justify-content: center;
 }

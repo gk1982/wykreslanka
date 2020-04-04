@@ -7,12 +7,14 @@
 
 //String of Polish letters available in the word search puzzle
 const ALPHABET = "AĄBCĆDEĘFGHIJKLŁMNŃOÓPRSŚTUWYZŹŻ";
-
 //Array of words to be found in the word search
 var words = [];
 
 //Default size of the initial board
 var default_board_size = 0;
+
+//The default value of select option
+var default_value_select = "";
 
 //Size of the currently selected board
 var board_size = default_board_size;
@@ -26,12 +28,12 @@ var boardCircle = document.querySelector("#boardCircle");
 //Displays the default empty board filled with letters.
 //Hides the display of program information.
 $(document).ready(function () {
-	
+
 displayBoard(default_board_size);
 $("#infoShow").show();
 $("#infoHide").hide();
 $(".infoWindow").hide();
-$("select").val("box");
+$("select").val(default_value_select);
 });
 
 //hide the info
@@ -75,7 +77,7 @@ $("#given_words").val(str);
 //change array with words to string and replace comma+newline instead of a comma
 var str2 = words+"";
 str2 = str2.replace(/\,/g,",\n");
-$("#slowa").text(str2);
+$("#searchWords").text(str2);
 
 fillBoardWithRandomLetters(board_type);
 
@@ -111,7 +113,7 @@ $("#boardCircle").removeClass('hide');
 
 $("#circle").click(function() {
 
-$("select").val("box");
+$("select").val(default_value_select);
 words=[];
 board_size=0;
 displayBoard(0);
@@ -119,14 +121,14 @@ displayBoard(0);
 });
 
 $("#wyczysc15x15").click(function() {
-$("select").val("box");
+$("select").val(default_value_select);
 words = [];
 board_size=15;
 displayBoard(15);
 });
 
 $("#boardBtn9x9").click(function() {
-$("select").val("box");
+$("select").val(default_value_select);
 words = [];
 board_size=9;
 displayBoard(9);
@@ -147,7 +149,7 @@ $("#generateButton").click(function() {
 *	Event handler retrieves words from the text field and formats them by removing unnecessary lines and spaces and raising to uppercase.
 */
 $("#given_words").on("keydown keyup", function(e) {
-	console.log(e.keyCode +" "+words);
+
   if((e.keyCode < 91) && (e.keyCode > 64) || e.keyCode == 13 || e.keyCode == 8 || (e.keyCode < 41) && (e.keyCode > 36)){
   var val = $.trim($("#given_words").val());
     if (val != "") {
@@ -280,7 +282,7 @@ $('#readyWordsCircle option').on('click', function(){
 	var value = this.value;
 	
 	
-	if(value=="box") {
+	if(value==default_value_select) {
 		if(board_size!=0) words=[];
 		board_size=0;
 		displayBoard(0);
@@ -298,7 +300,7 @@ $('#readyWordsCircle option').on('click', function(){
 		displayBoard(0);
 		wypelnij_plansze_kolo_slowami();
 	}
-	$("select").val("box");
+	$("select").val(default_value_select);
 });
 
 //chrome
@@ -307,7 +309,7 @@ $('#readyWordsCircle').on('click', function(ev){
 	var value = this.value;
 	
 	
-	if(value=="box") {
+	if(value==default_value_select) {
 		if(board_size!=0) words=[];
 		board_size=0;
 		displayBoard(0);
@@ -325,7 +327,7 @@ $('#readyWordsCircle').on('click', function(ev){
 		displayBoard(0);
 		wypelnij_plansze_kolo_slowami();
 	}
-	$("select").val("box");	
+	$("select").val(default_value_select);	
 	}
 });
 
@@ -336,7 +338,7 @@ $('#readyWords9x9 option').on('click', function(){
 
 	var value = this.value;
 	
-	if(value=="box") {
+	if(value==default_value_select) {
 		if(board_size!=9) words=[];
 		board_size=9;
 		displayBoard(board_size);
@@ -372,7 +374,7 @@ $('#readyWords9x9 option').on('click', function(){
 		displayBoard(9);
 		fillBoardWithWords();
 	}  
-	$("select").val("box");
+	$("select").val(default_value_select);
 });
 
 //chrome
@@ -381,7 +383,7 @@ $('#readyWords9x9').on('click', function(ev){
 	var value = this.value;
 	
 	
-	if(value=="box") {
+	if(value==default_value_select) {
 		if(board_size!=9) words=[];
 		board_size=9;
 		displayBoard(board_size);
@@ -417,7 +419,7 @@ $('#readyWords9x9').on('click', function(ev){
 		displayBoard(9);
 		fillBoardWithWords();
 	}  
-	$("select").val("box");
+	$("select").val(default_value_select);
     }
 });
 
@@ -430,7 +432,7 @@ $("#readyWords15x15 option").on('click', function(){
 	
 	
 	
-	if(value=="box") {
+	if(value==default_value_select) {
 		if(board_size!=15) words=[];
 		board_size=15;
 		displayBoard(board_size);
@@ -471,7 +473,7 @@ $("#readyWords15x15 option").on('click', function(){
 		displayBoard(15);
 		fillBoardWithWords();
 	}
-	$("select").val("box");
+	$("select").val(default_value_select);
 });
 
 //chrome
@@ -481,7 +483,7 @@ $("#readyWords15x15").on('click', function(ev){
 		var value = this.value;
 		
 		
-	if(value=="box") {
+	if(value==default_value_select) {
 		if(board_size!=15) words=[];
 		board_size=15;
 		displayBoard(board_size);
@@ -522,7 +524,7 @@ $("#readyWords15x15").on('click', function(ev){
 		displayBoard(15);
 		fillBoardWithWords();
 	}
-	$("select").val("box");
+	$("select").val(default_value_select);
 	}
 });
 
