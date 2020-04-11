@@ -19,6 +19,9 @@ var default_value_select = "";
 //Size of the currently selected board
 var board_size = default_board_size;
 
+//color of markings
+var mark_color = "tomato";
+
 //Boards elements
 var board9x9 = document.querySelector("#board9x9");
 var board15x15 = document.querySelector("#board15x15");
@@ -232,7 +235,7 @@ function fillBoardRandomly() {
 
 			var id_pola_planszy = "#"+"line"+(start_index+i)+"litera"+(losowa_linia);
 			$(id_pola_planszy).text(words[m].charAt(i));
-			$(id_pola_planszy).css("background-color","orange");
+			$(id_pola_planszy).css("background-color",mark_color);
 		}
 		}
 		else {
@@ -245,7 +248,7 @@ function fillBoardRandomly() {
 
 			var id_pola_planszy = "#"+"line"+losowa_linia+"litera"+(i+start_index);
 			$(id_pola_planszy).text(words[m].charAt(i));
-			$(id_pola_planszy).css("background-color","orange");
+			$(id_pola_planszy).css("background-color",mark_color);
 		}
 		}
 
@@ -533,7 +536,7 @@ function wypelnij_plansze_poziomo_slowami() {
 
 			var id_pola_planszy = "#"+"line"+losowa_linia+"litera"+(i+start_index);
 			$(id_pola_planszy).text(words[m].charAt(i));
-			$(id_pola_planszy).css("background-color","orange");
+			$(id_pola_planszy).css("background-color",mark_color);
 	}
 	}
 }
@@ -556,7 +559,7 @@ function wypelnij_plansze_pionowo_slowami() {
 
 			var id_pola_planszy = "#"+"line"+(start_index+i)+"litera"+(losowa_linia);
 			$(id_pola_planszy).text(words[m].charAt(i));
-			$(id_pola_planszy).css("background-color","orange");
+			$(id_pola_planszy).css("background-color",mark_color);
 	}
 	}
 }
@@ -571,7 +574,7 @@ function fillCircleWithWords() {
 		if(j>=8) j=j-8;
 		var id_pola_planszy = "#"+"circle3"+"char"+(j);
 		$(id_pola_planszy).text(words[0].charAt(i));
-		$(id_pola_planszy).css("color","darkorange");
+		$(id_pola_planszy).css("color",mark_color);
 	}
 	//circle2
 	start_index = Math.floor(Math.random()*12);
@@ -580,7 +583,7 @@ function fillCircleWithWords() {
 		if(j>=12) j=j-12;
 		var id_pola_planszy = "#"+"circle2"+"char"+(j);
 		$(id_pola_planszy).text(words[1].charAt(i));
-		$(id_pola_planszy).css("color","darkorange");
+		$(id_pola_planszy).css("color",mark_color);
 	}
 	//circle1
 	start_index = Math.floor(Math.random()*18);
@@ -589,7 +592,7 @@ function fillCircleWithWords() {
 		if(j>=18) j=j-18;
 		var id_pola_planszy = "#"+"circle1"+"char"+(j);
 		$(id_pola_planszy).text(words[2].charAt(i));
-		$(id_pola_planszy).css("color","darkorange");
+		$(id_pola_planszy).css("color",mark_color);
 	}
 	//circle0
 	start_index = Math.floor(Math.random()*24);
@@ -598,7 +601,7 @@ function fillCircleWithWords() {
 		if(j>=24) j=j-24;
 		var id_pola_planszy = "#"+"circle0"+"char"+(j);
 		$(id_pola_planszy).text(words[3].charAt(i));
-		$(id_pola_planszy).css("color","darkorange");
+		$(id_pola_planszy).css("color",mark_color);
 	}
 }
 
