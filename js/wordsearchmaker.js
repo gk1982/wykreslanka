@@ -104,7 +104,7 @@ $("#board15x15").removeClass('hide');
 if(board_type==0){
 $("#board9x9").hide();
 $("#board15x15").hide();
-$("boardCircle").show();
+$("#boardCircle").show();
 $("#board9x9").addClass('hide');
 $("#board15x15").addClass('hide');
 $("#boardCircle").removeClass('hide');

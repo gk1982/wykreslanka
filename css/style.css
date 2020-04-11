@@ -224,7 +224,7 @@ textarea:focus {
   background-color: white;
   color: black;
   margin: 0 auto;
-  display:table; 
+  display: table; 
   border: 2px solid rgba(0,0,0,.64);
   padding: 0px;
   margin-left: 32px;

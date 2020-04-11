@@ -39,6 +39,10 @@ article span {
 	line-height: 1.6;
 }
 
+#boardCircle span {
+  color: black !important;
+}
+
 .board {
 	color: black !important;
 	margin-top: 32px !important;
