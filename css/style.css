@@ -8,12 +8,17 @@ html {
 body {
   margin: 0 auto;
   padding: 0;
-  background-color: #484848;
-  background: linear-gradient(90deg, rgba(255,255,255,0.64) 2%, rgba(72,72,72,1) 16%, rgba(72,72,72,1) 84%, rgba(255,255,255,0.64) 98%);
-  color: white;
+  background-color: #fff;
+  background: linear-gradient(90deg, rgba(77,77,77,0.64) 2%, rgba(45,45,45,0.64) 16%, rgba(45,45,45,0.64) 84%, rgba(77,77,77,0.64) 98%);
+  color: #fefefe;
   font-family: Roboto, Georgia, sans-serif;
   font-size: 16px;
   overflow-y: scroll;
+}
+
+header {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
 }
 
 header h2 {
@@ -22,9 +27,30 @@ header h2 {
   padding: 0px;
 }
 
+header a:hover {
+  cursor: default;
+  text-decoration: none;
+  color: white !important;
+}
+
+header a:link {
+  text-decoration: none;
+  color: white;
+}
+
+header a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+header a:active {
+  text-decoration: none;
+  color: white;
+}
+
 header span {
-  padding-left:4px;
-  padding-right: 4px;
+  padding-left: 0px;
+  padding-right: 16px;
 }
 
 .top-baner {
@@ -33,7 +59,7 @@ header span {
   align-items: center;
   justify-content: center;
   height: 32px;
-  padding: 0px 0px 4px 0px;
+  padding: 5px 0 9px 0px;
   position: fixed;
   display: flex;
   z-index: 999;
@@ -42,8 +68,10 @@ header span {
 .infoWindow {
   position: absolute;
   background-color: #696969;
+  color: #000;
   border: 2px solid #696969;
   border-radius: 2px;
+  margin-top: 4px;
 }
 
 #infoShow {
@@ -100,37 +128,20 @@ aside {
 aside p {
   margin: 0;
   padding: 0;
-  padding-bottom: 2px;
+  padding-bottom: 4px;
   text-align: center;
-}
-
-header a:hover {
-  cursor: default;
-  text-decoration: none;
-  color: white !important;
-}
-
-header a:link {
-  text-decoration: none;
-  color: white;
-}
-
-header a:visited {
-  text-decoration: none;
-  color: white;
-}
-
-header a:active {
-  text-decoration: none;
-  color: white;
 }
 
 footer {
   position: fixed;
+  padding-top: 4px;
+  padding-bottom: 4px;
   bottom: 0;
   width: 100%;
   background-color:black;
   text-align: center;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
 }
 
 footer a:hover {
@@ -202,9 +213,9 @@ textarea:focus {
 .centeredContainer {
   margin: auto;
   width: 600px;
-  min-height: 900px;
+  min-height: 800px;
   border: 0px solid black;
-  padding: 36px 16px 16px 16px;
+  padding: 47px 16px 16px 16px;
 }
 
 #boardCircle {
@@ -214,7 +225,7 @@ textarea:focus {
   color: black;
   margin: 0 auto;
   display:table; 
-  border: 2px solid black;
+  border: 2px solid rgba(0,0,0,.64);
   padding: 0px;
   margin-left: 32px;
   border-radius: 50%;
