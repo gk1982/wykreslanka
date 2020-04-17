@@ -11,13 +11,13 @@ const ALPHABET = "AĄBCĆDEĘFGHIJKLŁMNŃOÓPRSŚTUWYZŹŻ";
 var words = [];
 
 //Default size of the initial board
-var default_board_size = 0;
+var defaultBoardSize = 0;
 
 //The default value of select option
-var default_value_select = "";
+var defaultValueSelect = "";
 
 //Size of the currently selected board
-var board_size = default_board_size;
+var boardSize = defaultBoardSize;
 
 //color of markings
 var mark_color = "tomato";
@@ -32,11 +32,11 @@ var boardCircle = document.querySelector("#boardCircle");
 //Hides the display of program information.
 $(document).ready(function () {
 
-displayBoard(default_board_size);
+displayBoard(defaultBoardSize);
 $("#infoShow").show();
 $("#infoHide").hide();
 $(".infoWindow").hide();
-$("select").val(default_value_select);
+$("select").val(defaultValueSelect);
 });
 
 //hide the info
@@ -85,7 +85,7 @@ $("#searchWords").text(str2);
 fillBoardWithRandomLetters(board_type);
 
 if(board_type==9){
-board_size=9;
+boardSize=9;
 $("#board15x15").hide();
 $("#boardCircle").hide();
 $("#board9x9").show();
@@ -95,7 +95,7 @@ $("#board9x9").removeClass('hide');
 }
 
 if(board_type==15){
-board_size=15;
+boardSize=15;
 $("#board9x9").hide();
 $("#boardCircle").hide();
 $("#board15x15").show();
@@ -116,35 +116,35 @@ $("#boardCircle").removeClass('hide');
 
 //clear the board of the circle
 $("#circle").click(function() {
-$("select").val(default_value_select);
+$("select").val(defaultValueSelect);
 words=[];
-board_size=0;
+boardSize=0;
 displayBoard(0);
 });
 
 //clear the board 15x15
 $("#boardBtn15x15").click(function() {
-$("select").val(default_value_select);
+$("select").val(defaultValueSelect);
 words = [];
-board_size=15;
+boardSize=15;
 displayBoard(15);
 });
 
 //clear the board 9x9
 $("#boardBtn9x9").click(function() {
-$("select").val(default_value_select);
+$("select").val(defaultValueSelect);
 words = [];
-board_size=9;
+boardSize=9;
 displayBoard(9);
 });
 
 $("#generateButton").click(function() {
-if(board_size==0) {
-  displayBoard(board_size);
+if(boardSize==0) {
+  displayBoard(boardSize);
   fillCircleWithWords();
 }
 else {
-  displayBoard(board_size);
+  displayBoard(boardSize);
   fillBoardWithWords();
 }
 });
@@ -172,87 +172,87 @@ function fillBoardWithRandomLetters(n) {
 if(n==0){
 //circle0
 for(var i=0;i<24;i++) {
-  var id_pola_planszy = "#"+"circle"+0+"char"+i;
+  var fieldId = "#"+"circle"+0+"char"+i;
   var letter = ALPHABET.charAt(Math.floor(Math.random()*ALPHABET.length));
-  $(id_pola_planszy).text(letter);
-  $(id_pola_planszy).css("color","black");
+  $(fieldId).text(letter);
+  $(fieldId).css("color","black");
 }
 //circle1
 for(var i=0;i<18;i++) {
-  var id_pola_planszy = "#"+"circle"+1+"char"+i;
+  var fieldId = "#"+"circle"+1+"char"+i;
   var letter = ALPHABET.charAt(Math.floor(Math.random()*ALPHABET.length));
-  $(id_pola_planszy).text(letter);
-  $(id_pola_planszy).css("color","black");
+  $(fieldId).text(letter);
+  $(fieldId).css("color","black");
 }
 //circle2
 for(var i=0;i<12;i++) {
-  var id_pola_planszy = "#"+"circle"+2+"char"+i;
+  var fieldId = "#"+"circle"+2+"char"+i;
   var letter = ALPHABET.charAt(Math.floor(Math.random()*ALPHABET.length));
-  $(id_pola_planszy).text(letter);
-  $(id_pola_planszy).css("color","black");
+  $(fieldId).text(letter);
+  $(fieldId).css("color","black");
 }
 //circle3
 for(var i=0;i<8;i++) {
-  var id_pola_planszy = "#"+"circle"+3+"char"+i;
+  var fieldId = "#"+"circle"+3+"char"+i;
   var letter = ALPHABET.charAt(Math.floor(Math.random()*ALPHABET.length));
-  $(id_pola_planszy).text(letter);
-  $(id_pola_planszy).css("color","black");
+  $(fieldId).text(letter);
+  $(fieldId).css("color","black");
 }
 
 } else {
 
 for(var i=0;i<n;i++) {
   for(var j=0;j<n;j++) {
-  var id_pola_planszy = "#"+"line"+i+"litera"+j;
+  var fieldId = "#"+"line"+i+"litera"+j;
   var letter = ALPHABET.charAt(Math.floor(Math.random()*ALPHABET.length));
-  $(id_pola_planszy).text(letter);
-  $(id_pola_planszy).css("background-color","white");
+  $(fieldId).text(letter);
+  $(fieldId).css("background-color","white");
   }
 }
 }
 }
 
+//Fill the board with given words in a random way
 function fillBoardRandomly() {
 
-	fillBoardWithRandomLetters(board_size);
+  fillBoardWithRandomLetters(boardSize);
 
-	var dostepne_linie = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14];
-	dostepne_linie = dostepne_linie.splice(0,board_size);
+  var dostepne_linie = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14];
+  dostepne_linie = dostepne_linie.splice(0,boardSize);
 
-	words.sort(function(a, b){return b.length - a.length});
+  words.sort(function(a, b){return b.length - a.length});
 
-	for(var m=0;m<words.length;m++) {
+  for(var m=0;m<words.length;m++) {
 
-		var oneOrZero = (Math.random()>0.5)? 1 : 0;
+    var oneOrZero = (Math.random()>0.5)? 1 : 0;
 
-		if(oneOrZero) {
+    if(oneOrZero) {
 
-		var losowy_index = m;
-		var losowa_linia = dostepne_linie[losowy_index];
+    var losowy_index = m;
+    var losowa_linia = dostepne_linie[losowy_index];
 
-		var start_index = Math.floor(Math.random()*(board_size+1-words[m].length-m))+m;
-		for(var i=0;i<words[m].length;i++) {
+    var start_index = Math.floor(Math.random()*(boardSize+1-words[m].length-m))+m;
+    for(var i=0;i<words[m].length;i++) {
 
-			var id_pola_planszy = "#"+"line"+(start_index+i)+"litera"+(losowa_linia);
-			$(id_pola_planszy).text(words[m].charAt(i));
-			$(id_pola_planszy).css("background-color",mark_color);
-		}
-		}
-		else {
+      var fieldId = "#"+"line"+(start_index+i)+"litera"+(losowa_linia);
+      $(fieldId).text(words[m].charAt(i));
+      $(fieldId).css("background-color",mark_color);
+    }
+    }
+    else {
 
-		var losowy_index = m;
-		var losowa_linia = dostepne_linie[losowy_index];
+    var losowy_index = m;
+    var losowa_linia = dostepne_linie[losowy_index];
 
-		var start_index = Math.floor(Math.random()*(board_size+1-words[m].length-m))+m;
-		for(var i=0;i<words[m].length;i++) {
+    var start_index = Math.floor(Math.random()*(boardSize+1-words[m].length-m))+m;
+    for(var i=0;i<words[m].length;i++) {
 
-			var id_pola_planszy = "#"+"line"+losowa_linia+"litera"+(i+start_index);
-			$(id_pola_planszy).text(words[m].charAt(i));
-			$(id_pola_planszy).css("background-color",mark_color);
-		}
-		}
-
-	}
+      var fieldId = "#"+"line"+losowa_linia+"litera"+(i+start_index);
+      $(fieldId).text(words[m].charAt(i));
+      $(fieldId).css("background-color",mark_color);
+    }
+    }
+  }
 }
 
 
@@ -270,25 +270,25 @@ $('#readyWordsCircle option').on('click', function(){
 	var value = this.value;
 	
 	
-	if(value==default_value_select) {
-		if(board_size!=0) words=[];
-		board_size=0;
+	if(value==defaultValueSelect) {
+		if(boardSize!=0) words=[];
+		boardSize=0;
 		displayBoard(0);
 		fillCircleWithWords();
 	}
 	else if(value=="names") {
 		words = ['ADAM','BASIA','DAREK','EWA'];
-		board_size=0;
+		boardSize=0;
 		displayBoard(0);
 		fillCircleWithWords();
 	}
 	else if(value=="seasons") {
 		words = ['WIOSNA','JESIEŃ','LATO','ZIMA'];
-		board_size=0;
+		boardSize=0;
 		displayBoard(0);
 		fillCircleWithWords();
 	}
-	$("select").val(default_value_select);
+	$("select").val(defaultValueSelect);
 });
 
 //chrome
@@ -297,25 +297,25 @@ $('#readyWordsCircle').on('click', function(ev){
 	var value = this.value;
 	
 	
-	if(value==default_value_select) {
-		if(board_size!=0) words=[];
-		board_size=0;
+	if(value==defaultValueSelect) {
+		if(boardSize!=0) words=[];
+		boardSize=0;
 		displayBoard(0);
 		fillCircleWithWords();
 	}
 	else if(value=="names") {
 		words = ['ADAM','BASIA','DAREK','EWA'];
-		board_size=0;
+		boardSize=0;
 		displayBoard(0);
 		fillCircleWithWords();
 	}
 	else if(value=="seasons") {
 		words = ['WIOSNA','LATO','JESIEŃ','ZIMA'];
-		board_size=0;
+		boardSize=0;
 		displayBoard(0);
 		fillCircleWithWords();
 	}
-	$("select").val(default_value_select);	
+	$("select").val(defaultValueSelect);	
 	}
 });
 
@@ -326,10 +326,10 @@ $('#readyWords9x9 option').on('click', function(){
 
 	var value = this.value;
 	
-	if(value==default_value_select) {
-		if(board_size!=9) words=[];
-		board_size=9;
-		displayBoard(board_size);
+	if(value==defaultValueSelect) {
+		if(boardSize!=9) words=[];
+		boardSize=9;
+		displayBoard(boardSize);
 		fillBoardWithWords();
 	}
 	else if(value=="names") {
@@ -362,7 +362,7 @@ $('#readyWords9x9 option').on('click', function(){
 		displayBoard(9);
 		fillBoardWithWords();
 	}  
-	$("select").val(default_value_select);
+	$("select").val(defaultValueSelect);
 });
 
 //chrome
@@ -371,10 +371,10 @@ $('#readyWords9x9').on('click', function(ev){
 	var value = this.value;
 	
 	
-	if(value==default_value_select) {
-		if(board_size!=9) words=[];
-		board_size=9;
-		displayBoard(board_size);
+	if(value==defaultValueSelect) {
+		if(boardSize!=9) words=[];
+		boardSize=9;
+		displayBoard(boardSize);
 		fillBoardWithWords();
 	}
 	else if(value=="names") {
@@ -407,7 +407,7 @@ $('#readyWords9x9').on('click', function(ev){
 		displayBoard(9);
 		fillBoardWithWords();
 	}  
-	$("select").val(default_value_select);
+	$("select").val(defaultValueSelect);
     }
 });
 
@@ -420,10 +420,10 @@ $("#readyWords15x15 option").on('click', function(){
 	
 	
 	
-	if(value==default_value_select) {
-		if(board_size!=15) words=[];
-		board_size=15;
-		displayBoard(board_size);
+	if(value==defaultValueSelect) {
+		if(boardSize!=15) words=[];
+		boardSize=15;
+		displayBoard(boardSize);
 		fillBoardWithWords();
 	}
 	else if(value=="names") {
@@ -461,7 +461,7 @@ $("#readyWords15x15 option").on('click', function(){
 		displayBoard(15);
 		fillBoardWithWords();
 	}
-	$("select").val(default_value_select);
+	$("select").val(defaultValueSelect);
 });
 
 //chrome
@@ -471,10 +471,10 @@ $("#readyWords15x15").on('click', function(ev){
 		var value = this.value;
 		
 		
-	if(value==default_value_select) {
-		if(board_size!=15) words=[];
-		board_size=15;
-		displayBoard(board_size);
+	if(value==defaultValueSelect) {
+		if(boardSize!=15) words=[];
+		boardSize=15;
+		displayBoard(boardSize);
 		fillBoardWithWords();
 	}
 	else if(value=="names") {
@@ -512,17 +512,17 @@ $("#readyWords15x15").on('click', function(ev){
 		displayBoard(15);
 		fillBoardWithWords();
 	}
-	$("select").val(default_value_select);
+	$("select").val(defaultValueSelect);
 	}
 });
 
 
 function wypelnij_plansze_poziomo_slowami() {
 
-	fillBoardWithRandomLetters(board_size);
+	fillBoardWithRandomLetters(boardSize);
 
 	var dostepne_linie = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14];
-	dostepne_linie = dostepne_linie.splice(0,board_size);
+	dostepne_linie = dostepne_linie.splice(0,boardSize);
 	console.log(dostepne_linie.length);
 
 	for(var m=0;m<words.length;m++) {
@@ -531,22 +531,22 @@ function wypelnij_plansze_poziomo_slowami() {
 		var losowa_linia = dostepne_linie[losowy_index];
 		dostepne_linie.splice(losowy_index,1);
 
-		var start_index = Math.floor(Math.random()*(board_size+1-words[m].length));
+		var start_index = Math.floor(Math.random()*(boardSize+1-words[m].length));
 		for(var i=0;i<words[m].length;i++) {
 
-			var id_pola_planszy = "#"+"line"+losowa_linia+"litera"+(i+start_index);
-			$(id_pola_planszy).text(words[m].charAt(i));
-			$(id_pola_planszy).css("background-color",mark_color);
+			var fieldId = "#"+"line"+losowa_linia+"litera"+(i+start_index);
+			$(fieldId).text(words[m].charAt(i));
+			$(fieldId).css("background-color",mark_color);
 	}
 	}
 }
 
 function wypelnij_plansze_pionowo_slowami() {
 
-	fillBoardWithRandomLetters(board_size);
+	fillBoardWithRandomLetters(boardSize);
 
 	var dostepne_linie = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14];
-	dostepne_linie = dostepne_linie.splice(0,board_size);
+	dostepne_linie = dostepne_linie.splice(0,boardSize);
 
 	for(var m=0;m<words.length;m++) {
 
@@ -554,12 +554,12 @@ function wypelnij_plansze_pionowo_slowami() {
 		var losowa_linia = dostepne_linie[losowy_index];
 		dostepne_linie.splice(losowy_index,1);
 
-		var start_index = Math.floor(Math.random()*(board_size+1-words[m].length));
+		var start_index = Math.floor(Math.random()*(boardSize+1-words[m].length));
 		for(var i=0;i<words[m].length;i++) {
 
-			var id_pola_planszy = "#"+"line"+(start_index+i)+"litera"+(losowa_linia);
-			$(id_pola_planszy).text(words[m].charAt(i));
-			$(id_pola_planszy).css("background-color",mark_color);
+			var fieldId = "#"+"line"+(start_index+i)+"litera"+(losowa_linia);
+			$(fieldId).text(words[m].charAt(i));
+			$(fieldId).css("background-color",mark_color);
 	}
 	}
 }
@@ -572,36 +572,36 @@ function fillCircleWithWords() {
 	for(var i=0;i<words[0].length;i++) {
 		var j = i+start_index;
 		if(j>=8) j=j-8;
-		var id_pola_planszy = "#"+"circle3"+"char"+(j);
-		$(id_pola_planszy).text(words[0].charAt(i));
-		$(id_pola_planszy).css("color",mark_color);
+		var fieldId = "#"+"circle3"+"char"+(j);
+		$(fieldId).text(words[0].charAt(i));
+		$(fieldId).css("color",mark_color);
 	}
 	//circle2
 	start_index = Math.floor(Math.random()*12);
 	for(var i=0;i<words[1].length;i++) {
 		var j = i+start_index;
 		if(j>=12) j=j-12;
-		var id_pola_planszy = "#"+"circle2"+"char"+(j);
-		$(id_pola_planszy).text(words[1].charAt(i));
-		$(id_pola_planszy).css("color",mark_color);
+		var fieldId = "#"+"circle2"+"char"+(j);
+		$(fieldId).text(words[1].charAt(i));
+		$(fieldId).css("color",mark_color);
 	}
 	//circle1
 	start_index = Math.floor(Math.random()*18);
 	for(var i=0;i<words[2].length;i++) {
 		var j = i+start_index;
 		if(j>=18) j=j-18;
-		var id_pola_planszy = "#"+"circle1"+"char"+(j);
-		$(id_pola_planszy).text(words[2].charAt(i));
-		$(id_pola_planszy).css("color",mark_color);
+		var fieldId = "#"+"circle1"+"char"+(j);
+		$(fieldId).text(words[2].charAt(i));
+		$(fieldId).css("color",mark_color);
 	}
 	//circle0
 	start_index = Math.floor(Math.random()*24);
 	for(var i=0;i<words[3].length;i++) {
 		var j = i+start_index;
 		if(j>=24) j=j-24;
-		var id_pola_planszy = "#"+"circle0"+"char"+(j);
-		$(id_pola_planszy).text(words[3].charAt(i));
-		$(id_pola_planszy).css("color",mark_color);
+		var fieldId = "#"+"circle0"+"char"+(j);
+		$(fieldId).text(words[3].charAt(i));
+		$(fieldId).css("color",mark_color);
 	}
 }
 

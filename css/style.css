@@ -168,25 +168,24 @@ button {
   background-color: black;
   border-radius: 4px;
   color: white;
-  
   z-index: 888;
-}
-
-#circle:focus {
-  filter: drop-shadow(202px 0px 6px rgba(0, 123, 255, 0.24));
-}
-
-#boardBtn9x9:focus {
-  filter: drop-shadow(202px 0px 6px rgba(0, 123, 255, 0.24));
-}
-#boardBtn15x15:focus{
-  filter: drop-shadow(202px 0px 6px rgba(0, 123, 255, 0.24));
 }
 
 button:focus {
   border-color: #80bdff;
   outline: 0;
   box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
+}
+
+#circle:focus {
+  box-shadow: 202px 0px 6px .2rem rgba(0,123,255,.24);
+}
+
+#boardBtn9x9:focus {
+  box-shadow: 202px 0px 6px .2rem rgba(0,123,255,.24);
+}
+#boardBtn15x15:focus{
+  box-shadow: 202px 0px 6px .2rem rgba(0,123,255,.24);
 }
 
 select {
@@ -197,7 +196,6 @@ select {
   background-color: black;
   color: white;
   border-radius: 4px;
-  
   z-index: 888;
 }
 
@@ -205,7 +203,6 @@ select:focus {
   border-color: #80bdff;
   outline: 0;
   box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
-  
 }
 
 textarea {
