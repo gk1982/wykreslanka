@@ -203,7 +203,7 @@ for(var i=0;i<8;i++) {
 
 for(var i=0;i<n;i++) {
   for(var j=0;j<n;j++) {
-  var fieldId = "#"+"line"+i+"litera"+j;
+  var fieldId = "#"+"line"+i+"char"+j;
   var letter = ALPHABET.charAt(Math.floor(Math.random()*ALPHABET.length));
   $(fieldId).text(letter);
   $(fieldId).css("background-color","white");
@@ -234,7 +234,7 @@ function fillBoardRandomly() {
     var start_index = Math.floor(Math.random()*(boardSize+1-words[m].length-m))+m;
     for(var i=0;i<words[m].length;i++) {
 
-      var fieldId = "#"+"line"+(start_index+i)+"litera"+(losowa_linia);
+      var fieldId = "#"+"line"+(start_index+i)+"char"+(losowa_linia);
       $(fieldId).text(words[m].charAt(i));
       $(fieldId).css("background-color",mark_color);
     }
@@ -247,7 +247,7 @@ function fillBoardRandomly() {
     var start_index = Math.floor(Math.random()*(boardSize+1-words[m].length-m))+m;
     for(var i=0;i<words[m].length;i++) {
 
-      var fieldId = "#"+"line"+losowa_linia+"litera"+(i+start_index);
+      var fieldId = "#"+"line"+losowa_linia+"char"+(i+start_index);
       $(fieldId).text(words[m].charAt(i));
       $(fieldId).css("background-color",mark_color);
     }
@@ -534,7 +534,7 @@ function wypelnij_plansze_poziomo_slowami() {
 		var start_index = Math.floor(Math.random()*(boardSize+1-words[m].length));
 		for(var i=0;i<words[m].length;i++) {
 
-			var fieldId = "#"+"line"+losowa_linia+"litera"+(i+start_index);
+			var fieldId = "#"+"line"+losowa_linia+"char"+(i+start_index);
 			$(fieldId).text(words[m].charAt(i));
 			$(fieldId).css("background-color",mark_color);
 	}
@@ -557,7 +557,7 @@ function wypelnij_plansze_pionowo_slowami() {
 		var start_index = Math.floor(Math.random()*(boardSize+1-words[m].length));
 		for(var i=0;i<words[m].length;i++) {
 
-			var fieldId = "#"+"line"+(start_index+i)+"litera"+(losowa_linia);
+			var fieldId = "#"+"line"+(start_index+i)+"char"+(losowa_linia);
 			$(fieldId).text(words[m].charAt(i));
 			$(fieldId).css("background-color",mark_color);
 	}
