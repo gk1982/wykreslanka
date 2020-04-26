@@ -7,6 +7,7 @@
 
 //String of Polish letters available in the word search puzzle
 const ALPHABET = "AĄBCĆDEĘFGHIJKLŁMNŃOÓPRSŚTUWYZŹŻ";
+
 //Array of words to be found in the word search
 var words = [];
 
@@ -20,7 +21,7 @@ var defaultValueSelect = "";
 var boardSize = defaultBoardSize;
 
 //color of markings
-var mark_color = "tomato";
+var markColor = "tomato";
 
 //Boards elements
 var board9x9 = document.querySelector("#board9x9");
@@ -217,39 +218,38 @@ function fillBoardRandomly() {
 
   fillBoardWithRandomLetters(boardSize);
 
-  var dostepne_linie = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14];
-  dostepne_linie = dostepne_linie.splice(0,boardSize);
+  var availableLines = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14];
+  availableLines = availableLines.splice(0,boardSize);
 
   words.sort(function(a, b){return b.length - a.length});
 
   for(var m=0;m<words.length;m++) {
 
-    var oneOrZero = (Math.random()>0.5)? 1 : 0;
-
-    if(oneOrZero) {
+    //randomize whether to place words vertically or horizontally
+    if(Math.random()>0.5) {
 
     var losowy_index = m;
-    var losowa_linia = dostepne_linie[losowy_index];
+    var randomLine = availableLines[losowy_index];
 
     var start_index = Math.floor(Math.random()*(boardSize+1-words[m].length-m))+m;
     for(var i=0;i<words[m].length;i++) {
 
-      var fieldId = "#"+"line"+(start_index+i)+"char"+(losowa_linia);
+      var fieldId = "#"+"line"+(start_index+i)+"char"+(randomLine);
       $(fieldId).text(words[m].charAt(i));
-      $(fieldId).css("background-color",mark_color);
+      $(fieldId).css("background-color",markColor);
     }
     }
     else {
 
     var losowy_index = m;
-    var losowa_linia = dostepne_linie[losowy_index];
+    var randomLine = availableLines[losowy_index];
 
     var start_index = Math.floor(Math.random()*(boardSize+1-words[m].length-m))+m;
     for(var i=0;i<words[m].length;i++) {
 
-      var fieldId = "#"+"line"+losowa_linia+"char"+(i+start_index);
+      var fieldId = "#"+"line"+randomLine+"char"+(i+start_index);
       $(fieldId).text(words[m].charAt(i));
-      $(fieldId).css("background-color",mark_color);
+      $(fieldId).css("background-color",markColor);
     }
     }
   }
@@ -521,22 +521,22 @@ function wypelnij_plansze_poziomo_slowami() {
 
 	fillBoardWithRandomLetters(boardSize);
 
-	var dostepne_linie = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14];
-	dostepne_linie = dostepne_linie.splice(0,boardSize);
-	console.log(dostepne_linie.length);
+	var availableLines = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14];
+	availableLines = availableLines.splice(0,boardSize);
+	console.log(availableLines.length);
 
 	for(var m=0;m<words.length;m++) {
 
-		var losowy_index = Math.floor(Math.random()*dostepne_linie.length);
-		var losowa_linia = dostepne_linie[losowy_index];
-		dostepne_linie.splice(losowy_index,1);
+		var losowy_index = Math.floor(Math.random()*availableLines.length);
+		var randomLine = availableLines[losowy_index];
+		availableLines.splice(losowy_index,1);
 
 		var start_index = Math.floor(Math.random()*(boardSize+1-words[m].length));
 		for(var i=0;i<words[m].length;i++) {
 
-			var fieldId = "#"+"line"+losowa_linia+"char"+(i+start_index);
+			var fieldId = "#"+"line"+randomLine+"char"+(i+start_index);
 			$(fieldId).text(words[m].charAt(i));
-			$(fieldId).css("background-color",mark_color);
+			$(fieldId).css("background-color",markColor);
 	}
 	}
 }
@@ -545,21 +545,21 @@ function wypelnij_plansze_pionowo_slowami() {
 
 	fillBoardWithRandomLetters(boardSize);
 
-	var dostepne_linie = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14];
-	dostepne_linie = dostepne_linie.splice(0,boardSize);
+	var availableLines = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14];
+	availableLines = availableLines.splice(0,boardSize);
 
 	for(var m=0;m<words.length;m++) {
 
-		var losowy_index = Math.floor(Math.random()*dostepne_linie.length);
-		var losowa_linia = dostepne_linie[losowy_index];
-		dostepne_linie.splice(losowy_index,1);
+		var losowy_index = Math.floor(Math.random()*availableLines.length);
+		var randomLine = availableLines[losowy_index];
+		availableLines.splice(losowy_index,1);
 
 		var start_index = Math.floor(Math.random()*(boardSize+1-words[m].length));
 		for(var i=0;i<words[m].length;i++) {
 
-			var fieldId = "#"+"line"+(start_index+i)+"char"+(losowa_linia);
+			var fieldId = "#"+"line"+(start_index+i)+"char"+(randomLine);
 			$(fieldId).text(words[m].charAt(i));
-			$(fieldId).css("background-color",mark_color);
+			$(fieldId).css("background-color",markColor);
 	}
 	}
 }
@@ -574,7 +574,7 @@ function fillCircleWithWords() {
 		if(j>=8) j=j-8;
 		var fieldId = "#"+"circle3"+"char"+(j);
 		$(fieldId).text(words[0].charAt(i));
-		$(fieldId).css("color",mark_color);
+		$(fieldId).css("color",markColor);
 	}
 	//circle2
 	start_index = Math.floor(Math.random()*12);
@@ -583,7 +583,7 @@ function fillCircleWithWords() {
 		if(j>=12) j=j-12;
 		var fieldId = "#"+"circle2"+"char"+(j);
 		$(fieldId).text(words[1].charAt(i));
-		$(fieldId).css("color",mark_color);
+		$(fieldId).css("color",markColor);
 	}
 	//circle1
 	start_index = Math.floor(Math.random()*18);
@@ -592,7 +592,7 @@ function fillCircleWithWords() {
 		if(j>=18) j=j-18;
 		var fieldId = "#"+"circle1"+"char"+(j);
 		$(fieldId).text(words[2].charAt(i));
-		$(fieldId).css("color",mark_color);
+		$(fieldId).css("color",markColor);
 	}
 	//circle0
 	start_index = Math.floor(Math.random()*24);
@@ -601,7 +601,7 @@ function fillCircleWithWords() {
 		if(j>=24) j=j-24;
 		var fieldId = "#"+"circle0"+"char"+(j);
 		$(fieldId).text(words[3].charAt(i));
-		$(fieldId).css("color",mark_color);
+		$(fieldId).css("color",markColor);
 	}
 }
 
