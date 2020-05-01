@@ -31,11 +31,8 @@ var boardCircle = document.querySelector("#boardCircle");
 //Function performed when the document is loaded.
 //Displays the default empty board filled with letters.
 //Hides the display of program information.
-$(document).ready(function () {
-
+$(function () {
 displayBoard(defaultBoardSize);
-$("#infoShow").show();
-$("#infoHide").hide();
 $(".infoWindow").hide();
 $("select").val(defaultValueSelect);
 });
@@ -43,12 +40,10 @@ $("select").val(defaultValueSelect);
 //hide the info
 $("#infoHide").click(function(){
 $(".infoWindow").hide();
-$("#infoHide").hide();
 });
 
 //show the info
 $("#infoShow").click(function(){
-$("#infoHide").show();
 $(".infoWindow").show();
 });
 
