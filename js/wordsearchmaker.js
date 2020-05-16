@@ -250,40 +250,36 @@ function fillBoardRandomly() {
   }
 }
 
-
-
+//function from the generate button
+//fills the board horizontally, vertically or randomly with words
 function fillBoardWithWords(){
   var rand = Math.floor(Math.random() * 3) + 1;
-    if(rand==3) wypelnij_plansze_poziomo_slowami();
-      else if(rand ==2) wypelnij_plansze_pionowo_slowami();
+    if(rand==3) fillBoardHorizontallyWithWords();
+      else if(rand ==2) fillBoardVerticallyWithWords();
         else fillBoardRandomly();
 }
 
 //circle select option click handler
 //firefox
 $('#readyWordsCircle option').on('click', function(){
-	var value = this.value;
-	
-	
-	if(value==defaultValueSelect) {
-		if(boardSize!=0) words=[];
-		boardSize=0;
-		displayBoard(0);
-		fillCircleWithWords();
-	}
-	else if(value=="names") {
-		words = ['ADAM','BASIA','DAREK','EWA'];
-		boardSize=0;
-		displayBoard(0);
-		fillCircleWithWords();
-	}
-	else if(value=="seasons") {
-		words = ['WIOSNA','JESIEŃ','LATO','ZIMA'];
-		boardSize=0;
-		displayBoard(0);
-		fillCircleWithWords();
-	}
-	$("select").val(defaultValueSelect);
+  var value = this.value;
+  if(value==defaultValueSelect) {
+    if(boardSize!=0) words=[];
+    boardSize=0;
+    displayBoard(0);
+    fillCircleWithWords();
+  } else if(value=="names") {
+    words = ['ADAM','BASIA','DAREK','EWA'];
+    boardSize=0;
+    displayBoard(0);
+    fillCircleWithWords();
+  } else if(value=="seasons") {
+    words = ['WIOSNA','JESIEŃ','LATO','ZIMA'];
+    boardSize=0;
+    displayBoard(0);
+    fillCircleWithWords();
+  }
+  $("select").val(defaultValueSelect);
 });
 
 //chrome
@@ -512,7 +508,7 @@ $("#readyWords15x15").on('click', function(ev){
 });
 
 
-function wypelnij_plansze_poziomo_slowami() {
+function fillBoardHorizontallyWithWords() {
 
 	fillBoardWithRandomLetters(boardSize);
 
@@ -536,7 +532,7 @@ function wypelnij_plansze_poziomo_slowami() {
 	}
 }
 
-function wypelnij_plansze_pionowo_slowami() {
+function fillBoardVerticallyWithWords() {
 
 	fillBoardWithRandomLetters(boardSize);
 
