@@ -1,7 +1,5 @@
 window.addEventListener('DOMContentLoaded', (event) => {
       
-      document.getElementById("background").classList.add('endBackgroundPosition');
-      
       const fundationYear = 2020;
       const actualYear = ""+(new Date(document.lastModified).getYear()+1900);
       document.getElementById("existence").innerHTML = 
